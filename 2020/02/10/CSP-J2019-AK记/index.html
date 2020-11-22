@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b50f9477.js","daovoice")
+  daovoice('init', {
+      app_id: "b50f9477"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Flandre.ico?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+  <meta name="description" content="前言我叫zps，准考证号JS-00810，来自苏州。今年我AK了CSP-J。总体感觉还是很水的，但是似乎没什么人AK。我表示不理解。总之，写个博客好了。 T1 数字游戏(number)题面给定一个保证长度为$8$的01字符串，求这个字符串中有多少1。 题解这还要解？签到题好吧…只要会打文件就能过。 时间复杂度$O(8)$。你要认为是$O(1)$也珂以。 代码12345678910111213141">
+<meta name="keywords" content="水题,游记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSP-J2019 AK记">
+<meta property="og:url" content="https://lightninguz2.github.io/2020/02/10/CSP-J2019-AK记/index.html">
+<meta property="og:site_name" content="Flandre Scarlet 的小屋">
+<meta property="og:description" content="前言我叫zps，准考证号JS-00810，来自苏州。今年我AK了CSP-J。总体感觉还是很水的，但是似乎没什么人AK。我表示不理解。总之，写个博客好了。 T1 数字游戏(number)题面给定一个保证长度为$8$的01字符串，求这个字符串中有多少1。 题解这还要解？签到题好吧…只要会打文件就能过。 时间复杂度$O(8)$。你要认为是$O(1)$也珂以。 代码12345678910111213141">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-14T12:10:21.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSP-J2019 AK记">
+<meta name="twitter:description" content="前言我叫zps，准考证号JS-00810，来自苏州。今年我AK了CSP-J。总体感觉还是很水的，但是似乎没什么人AK。我表示不理解。总之，写个博客好了。 T1 数字游戏(number)题面给定一个保证长度为$8$的01字符串，求这个字符串中有多少1。 题解这还要解？签到题好吧…只要会打文件就能过。 时间复杂度$O(8)$。你要认为是$O(1)$也珂以。 代码12345678910111213141">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Flandre Scarlet 的小屋" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://lightninguz2.github.io/2020/02/10/CSP-J2019-AK记/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CSP-J2019 AK记 | Flandre Scarlet 的小屋</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="/js/love.js"></script>
+  <!-- 爆炸红心效果 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/firework.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+  <link href="/js/google-code-prettify/Atelier-lakeside-Light.min.css" type="text/css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+   $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })    
+</script>
+
+<script src="/live2d-widget/autoload.js"></script>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- 插入音乐 -->
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+
+
+  <!-- 樱花特效 -->
+  <script src="https://lightninguz2.github.io/js/src/Sakura.js"></script>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Flandre Scarlet 的小屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    持续更新中...
+    
+      
+        <p class="site-subtitle">LightningUZ 的博客</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>介绍</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-links">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-address-book"></i> <br>友链</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-addons">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/addons/" rel="section"><i class="menu-item-icon fa fa-fw fa-tv"></i> <br>附加功能</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-games">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/addons/games" rel="section"><i class="menu-item-icon fa fa-fw fa-play"></i> <br>游戏</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lightninguz2.github.io/2020/02/10/CSP-J2019-AK记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LightningUZ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/zps-avatar-new.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Flandre Scarlet 的小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSP-J2019 AK记
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-10 00:32:33" itemprop="dateCreated datePublished" datetime="2020-02-10T00:32:33+08:00">2020-02-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-14 20:10:21" itemprop="dateModified" datetime="2019-12-14T20:10:21+08:00">2019-12-14</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数： 2.7k 字</span>
+                
+                <span title="本文字数"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长  &asymp; 12 分钟</span>
+                
+                <span title="阅读时长"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我叫zps，准考证号JS-00810，来自苏州。今年我AK了CSP-J。总体感觉还是很水的，但是似乎没什么人AK。我表示不理解。总之，写个博客好了。</p>
+<h3 id="T1-数字游戏-number"><a href="#T1-数字游戏-number" class="headerlink" title="T1 数字游戏(number)"></a>T1 数字游戏(number)</h3><h4 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h4><p>给定一个保证长度为$8$的01字符串，求这个字符串中有多少1。</p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>这还要解？签到题好吧…只要会打文件就能过。</p>
+<p>时间复杂度$O(8)$。你要认为是$O(1)$也珂以。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> Flandre_Scarlet</span><br><span class="line">&#123;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> N 100</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> MEM(x,a) memset(x,a,sizeof(x))</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> CL(x) MEM(x,0)</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> F(i,l,r) for(int i=l;i&lt;=r;++i)</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> D(i,r,l) for(int i=r;i&gt;=l;--i)</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> Fs(i,l,r,c) for(int i=l;i&lt;=r;c)</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">define</span> Ds(i,r,l,c) for(int i=r;i&gt;=l;c)</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">char</span> s[N];<span class="keyword">int</span> n;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Input</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,s+<span class="number">1</span>);n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		F(i,<span class="number">1</span>,n) <span class="keyword">if</span> (s[i]==<span class="string">'1'</span>) ans++;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">bool</span> OPEN_FILE=<span class="number">0</span>; <span class="comment">//考场上要改为1，需要开文件</span></span><br><span class="line">		<span class="keyword">if</span> (OPEN_FILE)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="meta">#<span class="meta-keyword">define</span> filename <span class="meta-string">"number"</span></span></span><br><span class="line">			freopen(filename <span class="string">".in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">			freopen(filename <span class="string">".out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		Input();</span><br><span class="line">		Solve();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Flandre_Scarlet::Main();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="T2-公交换乘-transfer"><a href="#T2-公交换乘-transfer" class="headerlink" title="T2 公交换乘(transfer)"></a>T2 公交换乘(transfer)</h3><h4 id="题面-1"><a href="#题面-1" class="headerlink" title="题面"></a>题面</h4><p>你近期有$n&lt;=1e5$个乘坐公共交通的记录，有些是地铁，有些是公交。每次都有三个值：$p,t,k$。$k=0$表示地铁，$=1$表示公交。$p$表示价格。$t$表示时刻。每坐一次地铁都会在上车时得到一个坐公交车的优惠券。如果两个时刻$t_{bus},t_{subway}$之间满足$t_{bus}-t_{subway}&lt;=45$且$t_{bus}&gt;t_{subway}$，则可以使用一张优惠券，免费乘坐公交。</p>
+<p>合理分配优惠券使得总花费最小。保证时间$t$<strong>严格递增</strong>是顺序给出的。</p>
+<h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><p>由于时间是<strong>严格递增</strong>的，时间差要$&lt;=45$，所以每次至少会$+1$。所以，对于每个公交车，<strong>最多</strong>有$45$个优惠券满足条件。显然，在所有能用的优惠券中，肯定要选择最早的，因为晚一些的优惠券就能用更久，给后面的公交车用。</p>
+<p>用一个$vector$存储每趟公交车能用的优惠券编号。对于已经用过的优惠券编号，我们用一个$vis$数字标记已经用过。每次暴力找$vis=0$且最小的。</p>
+<p>时间复杂度$O(45n)$。你也珂以认为是$O(n)$。<del>虽然这常数带的比log还大。</del></p>
+<p><del>吐槽我的一个同学，考场上坐在我左边两个机位，他用了二分图+Dinic…怎么会有这种人…</del></p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> Flandre_Scarlet</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> N 155555</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> MEM(x,a) memset(x,a,sizeof(x))</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> CL(x) MEM(x,0)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> F(i,l,r) for(int i=l;i&lt;=r;++i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> D(i,r,l) for(int i=r;i&gt;=l;--i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Fs(i,l,r,c) for(int i=l;i&lt;=r;c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Ds(i,r,l,c) for(int i=r;i&gt;=l;c)</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> tp[N],price[N],tim[N];</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Rd</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        x=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();<span class="keyword">int</span> f=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> <span class="keyword">or</span> c&gt;<span class="string">'9'</span>) f=(c==<span class="string">'-'</span>)?<span class="number">-1</span>:<span class="number">1</span>,c=getchar();</span><br><span class="line">        <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> <span class="keyword">and</span> c&lt;=<span class="string">'9'</span>) x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>),c=getchar();</span><br><span class="line">        <span class="keyword">return</span> (x=(f==<span class="number">1</span>?x:-x));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Input</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Rd(n);</span><br><span class="line">        F(i,<span class="number">1</span>,n)</span><br><span class="line">        &#123;</span><br><span class="line">            Rd(tp[i]);Rd(price[i]);Rd(tim[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; use[N]; <span class="comment">//第i趟公交车能用的优惠券编号</span></span><br><span class="line">    <span class="keyword">bool</span> vis[N]; <span class="comment">//判断是否使用过</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        F(i,<span class="number">1</span>,n) use[i].clear();</span><br><span class="line">        CL(vis);</span><br><span class="line">        <span class="keyword">int</span> cost=<span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        F(i,<span class="number">1</span>,n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (tp[i]==<span class="number">0</span>) <span class="comment">//如果是地铁，就记录花费并更新优惠券</span></span><br><span class="line">            &#123;</span><br><span class="line">                cost+=price[i]; <span class="comment">//地铁没有优惠券呢~</span></span><br><span class="line">                F(j,i+<span class="number">1</span>,n) </span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (tim[j]-tim[i]&gt;<span class="number">45</span>) <span class="keyword">break</span>; <span class="comment">//这一步保证复杂度</span></span><br><span class="line">                    <span class="keyword">if</span> (tp[j]==<span class="number">1</span>) use[j].push_back(i); <span class="comment">//要判断是地铁才能用优惠券</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">bool</span> cxk=<span class="number">0</span>; <span class="comment">//记录有没有能用的</span></span><br><span class="line">                F(j,<span class="number">0</span>,(<span class="keyword">int</span>)use[i].size()<span class="number">-1</span>)<span class="comment">//use[i].size()&lt;=45</span></span><br><span class="line">                <span class="comment">//由于我们是顺序枚举的i，所以我们的use数组中的每个vector都是有序的</span></span><br><span class="line">                &#123;<span class="keyword">int</span> u=use[i][j];</span><br><span class="line">                    <span class="keyword">if</span> (!vis[u] <span class="keyword">and</span> price[u]&gt;=price[i]) <span class="comment">//第一个满足条件的一定是t最小的</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        vis[u]=<span class="number">1</span>;cxk=<span class="number">1</span>;<span class="keyword">break</span>; </span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> (!cxk) cost+=price[i]; <span class="comment">// 如果不能用的，没有办法，只能花点小钱了</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,cost);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">bool</span> OPEN_FILE=<span class="number">0</span>; <span class="comment">//同上，考场上改为1</span></span><br><span class="line">        <span class="keyword">if</span> (OPEN_FILE)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="meta">#<span class="meta-keyword">define</span> filename <span class="meta-string">"transfer"</span></span></span><br><span class="line">            freopen(filename <span class="string">".in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">            freopen(filename <span class="string">".out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        Input();</span><br><span class="line">        Solve();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Flandre_Scarlet::Main();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="T3-纪念品-souvenir"><a href="#T3-纪念品-souvenir" class="headerlink" title="T3 纪念品(souvenir)"></a>T3 纪念品(souvenir)</h3><p><a href="https://fanyi.baidu.com/#en/zh/souvenir" target="_blank" rel="noopener">单词释义</a><br>(英) [ˌsuːvəˈnɪə(r)]<br>(美) [ˌsuːvəˈnɪr] </p>
+<p><del>（我才不会告诉你我考场上不认得这个词呢）</del></p>
+<h4 id="题面-2"><a href="#题面-2" class="headerlink" title="题面"></a>题面</h4><p>有$T$天，$n$个纪念品，一开始你有$m$个金币。接下来一个$T\times n$的矩阵$P$，$p[i][j]$表示第$i$天第$j$个纪念品的价格。</p>
+<p>每天有两种操作，买或卖任意一个纪念品，操作次数珂以无限次。当日买的纪念品，当日就珂以卖。当日卖得的钱，当日就珂以买其它纪念品。请你求出，到最后，连本带利最多能有多少钱。</p>
+<p>$T,n&lt;=100$,$m&lt;=1000$。任意时刻，手头的金币的数量不会超过$1e4$。</p>
+<h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><p>对于第$i$天，我们只考虑和$i+1$天做交易的情况即珂。因为$(a-b)+(b-c)=a-c$，所以$i$和$i+k$天之间做生意的情况就珂以拆分为$(i,i+1)+(i+1,i+2)…+(i+k-1,i+k)$。这步很关键（但是你们为啥想不到nya）</p>
+<p>然后我们第$i$天和第$i+1$天珂以这样求解：对于每个物品$j$，用$p[i+1][j]-p[i][j]$作价值，$p[i][j]$为重量，$M$为背包容积。跑一个完全背包之后，设答案为$ans$，则$ans$就是最大的<strong>净赚</strong>。所以$m+=ans$就是最后手头上的钱数。做$T-1$遍这样的背包即珂。</p>
+<p>有一个小问题：不是说当天赚的前当天就珂以用吗？</p>
+<p>答：但是我们考虑的是这一天和下一天。第$i$天考虑的交易会在第$i+1$天的时候当天买来当天用。</p>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> Flandre_Scarlet</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> N 122</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> V 14444</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> F(i,l,r) for(int i=l;i&lt;=r;++i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> D(i,r,l) for(int i=r;i&gt;=l;--i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Fs(i,l,r,c) for(int i=l;i&lt;=r;c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Ds(i,r,l,c) for(int i=r;i&gt;=l;c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Tra(i,u) for(int i=G.Start(u),__v=G.To(i);~i;i=G.Next(i),__v=G.To(i))</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> MEM(x,a) memset(x,a,sizeof(x))</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> FK(x) MEM(x,0)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">R1</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        x=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();<span class="keyword">int</span> f=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> <span class="keyword">or</span> c&gt;<span class="string">'9'</span>) f=(c==<span class="string">'-'</span>)?<span class="number">-1</span>:<span class="number">1</span>,c=getchar();</span><br><span class="line">        <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> <span class="keyword">and</span> c&lt;=<span class="string">'9'</span>) x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>),c=getchar();</span><br><span class="line">        x=(f==<span class="number">1</span>)?x:-x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t,n,m;</span><br><span class="line">    <span class="keyword">int</span> p[N][N];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Input</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        R1(t),R1(n),R1(m);</span><br><span class="line">        F(i,<span class="number">1</span>,t) F(j,<span class="number">1</span>,n) R1(p[i][j]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> w[N],v[N];</span><br><span class="line">    <span class="keyword">int</span> dp[V];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Soviet</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        F(i,<span class="number">1</span>,t<span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            F(j,<span class="number">1</span>,n) w[j]=p[i][j],v[j]=p[i+<span class="number">1</span>][j]-p[i][j];</span><br><span class="line">            FK(dp);</span><br><span class="line">            F(j,<span class="number">1</span>,n) F(k,w[j],m) dp[k]=max(dp[k],dp[k-w[j]]+v[j]);<span class="comment">//做一个DP</span></span><br><span class="line">            m+=*max_element(dp+<span class="number">1</span>,dp+m+<span class="number">1</span>);<span class="comment">//dp中的最大值就是答案，m+=答案</span></span><br><span class="line">            <span class="comment">//max_element: 返回区间最大值第一次出现的指针</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,m);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Flan void</span></span><br><span class="line">    <span class="function">Flan <span class="title">IsMyWife</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Input();</span><br><span class="line">        Soviet();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Flandre_Scarlet::IsMyWife();</span><br><span class="line">    getchar();getchar();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="放松一下"><a href="#放松一下" class="headerlink" title="放松一下"></a>放松一下</h3><p>歌曲：</p>
+<ol>
+<li>Hop</li>
+<li>极乐净土</li>
+<li>Säkkijärven Polkka</li>
+</ol>
+<p>番剧&amp;漫画：</p>
+<ol>
+<li>新闻联播</li>
+<li>海峡两岸</li>
+</ol>
+<p>游戏：</p>
+<ol>
+<li>OSU!</li>
+<li>东方红魔乡~</li>
+</ol>
+<p>前方高能！</p>
+<h3 id="T4-加工零件-work"><a href="#T4-加工零件-work" class="headerlink" title="T4 加工零件(work)"></a>T4 加工零件(work)</h3><p>给定一个无向图表示一个工厂里面的流水线的传递网络。第$u$个点要生产一个$L$阶段的零件，就需要$u$连接的<strong>所有</strong>工厂<strong>都</strong>生产一个$L-1$阶段的零件。第$0$阶段的零件即原材料。$q$个询问，请你求出$u$号工厂生产$L$阶段的零件是否需要$1$工厂提供原材料。</p>
+<p>$n,q&lt;=1e5,1&lt;=u&lt;=n,L&lt;=1e9$。</p>
+<h4 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h4><p>考场代码有点小问题，但是数据水，问题不大~</p>
+<p>提供的代码是各种$OJ$上都能拿满的代码，和前三题不一样，不是考场代码。</p>
+<p>转化为：$u$走$L$步能否到$1$，一条边珂以经过无数次。</p>
+<p>特判不连通，直接输出No。</p>
+<p>然后，由于一条边珂以经过无数次，如果走$k$能到，我们把其中一条边走两遍，$k+2$步也能到。</p>
+<p>所以我们从$1$开始维护奇数/偶数长度的最短路即珂。看着转移，很简单的。</p>
+<p>同学问：vis怎么开？</p>
+<p>我：不用开…我们只有在能更新最短路的时候入队列，不能更新的时候就不用入队列了，这样显然是不会重复的，因为边权都是$1$。</p>
+<h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> Flandre_Scarlet</span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> N 455555</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> MEM(x,a) memset(x,a,sizeof(x))</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> CL(x) MEM(x,0)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> F(i,l,r) for(int i=l;i&lt;=r;++i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> D(i,r,l) for(int i=r;i&gt;=l;--i)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Fs(i,l,r,c) for(int i=l;i&lt;=r;c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> Ds(i,r,l,c) for(int i=r;i&gt;=l;c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> p_b push_back</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">Rd</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        x=<span class="number">0</span>;<span class="keyword">char</span> c=getchar();<span class="keyword">int</span> f=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span> <span class="keyword">or</span> c&gt;<span class="string">'9'</span>) f=(c==<span class="string">'-'</span>)?<span class="number">-1</span>:<span class="number">1</span>,c=getchar();</span><br><span class="line">        <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> <span class="keyword">and</span> c&lt;=<span class="string">'9'</span>) x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(c^<span class="number">48</span>),c=getchar();</span><br><span class="line">        <span class="keyword">return</span> (x=(f==<span class="number">1</span>?x:-x));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[N];</span><br><span class="line">    <span class="keyword">int</span> n,m,q;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Input</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Rd(n),Rd(m),Rd(q);</span><br><span class="line">        F(i,<span class="number">1</span>,m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> u,v;Rd(u),Rd(v);</span><br><span class="line">            G[u].p_b(v);G[v].p_b(u);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">namespace</span> lilunAC <span class="comment">//理论AC，实际上也AC了呢...</span></span><br><span class="line">    <span class="comment">//考场上害怕，就只写了理论AC</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> dis[N][<span class="number">2</span>];<span class="keyword">int</span> Q[N];<span class="comment">//dis[*][0/1]：偶数/奇数长度的最短路</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">int</span> head=<span class="number">1</span>,tail=<span class="number">1</span>;Q[tail]=<span class="number">1</span>;</span><br><span class="line">            MEM(dis,<span class="number">0x3f</span>);dis[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span>(head&lt;=tail)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> u=Q[head];++head;</span><br><span class="line">                F(i,<span class="number">0</span>,(<span class="keyword">int</span>)G[u].size()<span class="number">-1</span>)</span><br><span class="line">                &#123;<span class="keyword">int</span> v=G[u][i];</span><br><span class="line">                    <span class="keyword">bool</span> add=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">if</span> (dis[u][<span class="number">1</span>]+<span class="number">1</span>&lt;dis[v][<span class="number">0</span>]) </span><br><span class="line">                    &#123;</span><br><span class="line">                        dis[v][<span class="number">0</span>]=dis[u][<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">                        add=<span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (dis[u][<span class="number">0</span>]+<span class="number">1</span>&lt;dis[v][<span class="number">1</span>]) </span><br><span class="line">                    &#123;</span><br><span class="line">                        dis[v][<span class="number">1</span>]=dis[u][<span class="number">0</span>]+<span class="number">1</span>;</span><br><span class="line">                        add=<span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (add) Q[++tail]=v;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            BFS();</span><br><span class="line">            F(i,<span class="number">1</span>,q)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> u,l;Rd(u),Rd(l);</span><br><span class="line">                <span class="keyword">if</span> (l&gt;=dis[u][l%<span class="number">2</span>])</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">puts</span>(<span class="string">"Yes"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">"No"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (G[<span class="number">1</span>].size()==<span class="number">0</span>) F(i,<span class="number">1</span>,q) <span class="built_in">puts</span>(<span class="string">"No"</span>); <span class="comment">//特判不连通</span></span><br><span class="line">        <span class="keyword">else</span> lilunAC::Solve();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">bool</span> OPEN_FILE=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (OPEN_FILE)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="meta">#<span class="meta-keyword">define</span> filename <span class="meta-string">"work"</span></span></span><br><span class="line">            freopen(filename <span class="string">".in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">            freopen(filename <span class="string">".out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        Input();</span><br><span class="line">        Solve();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Flandre_Scarlet::Main();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/水题/" rel="tag"># 水题</a>
+          
+            <a href="/tags/游记/" rel="tag"># 游记</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/10/Codeforces-988C-Equal-Sums-题解/" rel="next" title="Codeforces 988C Equal Sums 题解">
+                <i class="fa fa-chevron-left"></i> Codeforces 988C Equal Sums 题解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/10/FFT-NTT模板-笔记/" rel="prev" title="FFT+NTT模板 笔记">
+                FFT+NTT模板 笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>w
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/zps-avatar-new.jpg" alt="LightningUZ">
+            
+              <p class="site-author-name" itemprop="name">LightningUZ</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          备注:左下角的看板娘有点卡,试试刷新几下看看
+
+          
+            <div id="days"></div>
+            <script>
+            function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("08/29/2019 08:00:00");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=setzero(Math.floor(e_hrsold));
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+                seconds=setzero(Math.floor((e_minsold-minsold)*60));
+                document.getElementById('days').innerHTML="这个小窝莫名其妙地苟活了 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+            }
+            function setzero(i) {
+                if (i<10) {
+                    i="0" + i
+                };
+                return i;
+            }
+            show_date_time();
+            </script>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=106252" title="luogu &rarr; https://www.luogu.org/space/show?uid=106252" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>luogu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://space.bilibili.com/326497027" title="bilibli &rarr; https://space.bilibili.com/326497027" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>bilibli</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/LightningUZ2" title="github &rarr; https://github.com/LightningUZ2" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>github</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://fa555.github.io/" title="https://fa555.github.io/" rel="noopener" target="_blank">SD巨佬 fa_555</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://muronglin.top/" title="https://muronglin.top/" rel="noopener" target="_blank">ZJ巨佬(女) 慕容琳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leflacon.github.io/" title="https://leflacon.github.io/" rel="noopener" target="_blank">神仙姐姐 LeFlacon</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sukazyo.cc/" title="https://sukazyo.cc/" rel="noopener" target="_blank">机房巨佬 Sukazyo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liziheng.ac.cn" title="https://www.liziheng.ac.cn" rel="noopener" target="_blank">年少有志 liziheng</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://miuyou.github.io/" title="https://miuyou.github.io/" rel="noopener" target="_blank">春待ち    Miu_you</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stapx.chuhelan.com/" title="https://stapx.chuhelan.com/" rel="noopener" target="_blank">twitter神仙 StapxSteve</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          <div id="days"></div>
+<script>
+setInterval(clock,1000);
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("08/29/2019 08:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    if (hrsold+8>24) {hrsold-=24};
+    document.getElementById('days').innerHTML="现在是 "+hrsold+":"+minsold+":"+seconds;
+    document.getElementById('days').innerHTML="这个小窝莫名其妙地苟活了 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T1-数字游戏-number"><span class="nav-number">2.</span> <span class="nav-text">T1 数字游戏(number)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面"><span class="nav-number">2.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解"><span class="nav-number">2.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">2.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T2-公交换乘-transfer"><span class="nav-number">3.</span> <span class="nav-text">T2 公交换乘(transfer)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面-1"><span class="nav-number">3.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解-1"><span class="nav-number">3.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T3-纪念品-souvenir"><span class="nav-number">4.</span> <span class="nav-text">T3 纪念品(souvenir)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题面-2"><span class="nav-number">4.1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题解-2"><span class="nav-number">4.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-2"><span class="nav-number">4.3.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#放松一下"><span class="nav-number">5.</span> <span class="nav-text">放松一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T4-加工零件-work"><span class="nav-number">6.</span> <span class="nav-text">T4 加工零件(work)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题解-3"><span class="nav-number">6.1.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-3"><span class="nav-number">6.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LightningUZ</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数"></span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+<link href="/js/google-code-prettify/tomorrow-night-bright.min.css" type="text/css" rel="stylesheet">
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        当你的能力还配不上你的目标时，没有资格后退！ 
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+<!-- 女儿 -->
+  <script src="/live2d-widget/autoload.js"></script>
+<!-- 崩溃欺骗 -->
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</html>

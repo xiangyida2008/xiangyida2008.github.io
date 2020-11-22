@@ -1,0 +1,444 @@
+AC_list
+    9.2~9.6 禁用电脑事件,均0
+
+    2019-09-07 6
+    https://www.luogu.org/problem/P3475
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1130
+    https://www.luogu.org/problem/P2679
+    https://loj.ac/problem/2424
+    https://vjudge.net/problem/CodeForces-11D
+    https://vjudge.net/problem/CodeForces-939F
+
+    2019-09-08 7
+    https://www.luogu.org/problem/P4167
+    https://www.luogu.org/problem/P3760
+    https://www.lydsy.com/JudgeOnline/problem.php?id=4888
+    https://www.luogu.org/problem/AT2038
+    https://vjudge.net/problem/CodeForces-1117D
+    https://www.luogu.org/problem/CF1117D
+    https://www.luogu.org/problem/P2101
+
+    2019-09-09 4
+    https://www.luogu.org/problem/P3539
+    https://www.luogu.org/problem/P4834
+    http://www.51nod.com/Challenge/Problem.html#problemId=1128
+    https://vjudge.net/problem/CodeForces-719E 
+
+    2019-09-10 4
+    https://vjudge.net/problem/CodeForces-383C
+    https://www.luogu.org/problem/P1168
+    http://poj.org/problem?id=3784
+    http://acm.hdu.edu.cn/showproblem.php?pid=4496
+
+    2019-09-11 4
+    https://www.luogu.org/problem/P3195 
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1010
+    http://poj.org/problem?id=3046
+    https://vjudge.net/problem/CodeForces-91B#author=0
+
+    2019-09-12 4
+    https://vjudge.net/problem/CodeForces-787D
+    https://vjudge.net/problem/CodeForces-123E
+    https://www.luogu.org/problem/P3924 
+    https://loj.ac/problem/2591
+
+    2019-09-13 6
+    https://www.luogu.org/problem/P3966
+    https://loj.ac/problem/10060
+    https://www.lydsy.com/JudgeOnline/problem.php?id=3172
+    https://www.luogu.org/problem/P5357
+    https://www.luogu.org/problem/P3435
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1511
+
+    2019-09-14 7
+    https://www.luogu.org/problem/P2343
+    https://vjudge.net/problem/CodeForces-1030C
+    http://acm.hdu.edu.cn/showproblem.php?pid=2767
+    http://acm.hdu.edu.cn/showproblem.php?pid=3836
+    https://vjudge.net/problem/CodeForces-1082G#author=614984177
+    https://www.luogu.org/problem/P3153
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1305
+
+    2019-09-15 6
+    https://www.luogu.org/problem/P4159
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1297
+    https://www.luogu.org/problem/P3597
+    https://vjudge.net/problem/CodeForces-17D
+    https://www.luogu.org/problem/P2480
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1951
+
+    2019-09-16 4
+    http://poj.org/problem?id=1017
+    https://www.luogu.com.cn/problem/P3507
+    https://www.luogu.com.cn/problem/P3542
+    https://vjudge.net/problem/CodeForces-847E
+
+    2019-09-17 4
+    https://loj.ac/problem/2873 
+    https://www.lydsy.com/JudgeOnline/problem.php?id=4240
+    https://www.luogu.com.cn/problem/AT1218
+    https://vjudge.net/problem/Gym-102082G
+
+    2019-09-18 4
+    https://www.lydsy.com/JudgeOnline/problem.php?id=3675
+    https://www.luogu.com.cn/problem/P3648
+    https://vjudge.net/problem/CodeForces-651A
+    http://acm.hdu.edu.cn/showproblem.php?pid=5945
+
+    2019-09-19 4
+    https://www.luogu.com.cn/problem/P4999
+    http://poj.org/problem?id=2096
+    https://vjudge.net/problem/CodeForces-235B
+    https://vjudge.net/problem/CodeForces-351B
+
+    2019-09-20 4
+    https://vjudge.net/problem/CodeForces-764C
+    https://vjudge.net/problem/CodeForces-707C
+    https://www.luogu.com.cn/problem/P5018
+    https://loj.ac/problem/3008
+
+    2019-09-21 8
+    https://www.luogu.com.cn/problem/P3470
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1122
+    https://loj.ac/problem/10063 
+    https://www.luogu.com.cn/problem/P4052
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1030
+    http://acm.hdu.edu.cn/showproblem.php?pid=2896
+    https://vjudge.net/problem/CodeForces-133A
+    https://loj.ac/problem/103
+
+    2019-09-22 7
+    https://vjudge.net/problem/AtCoder-2649
+    https://vjudge.net/problem/CodeForces-631D
+    https://vjudge.net/problem/CodeForces-831B
+    https://www.luogu.com.cn/problem/P5389
+    https://www.luogu.com.cn/problem/P5390
+    https://www.luogu.com.cn/problem/P5017
+    https://loj.ac/problem/3007
+
+    2019-09-23 4
+    http://acm.hdu.edu.cn/showproblem.php?pid=6521
+    https://www.luogu.com.cn/problem/P1966 
+    https://loj.ac/problem/2609
+    https://vjudge.net/problem/CodeForces-301D 
+    
+    2019-09-24 4
+    https://www.luogu.org/problem/P1450
+    https://www.lydsy.com/JudgeOnline/problem.php?id=1042
+    https://www.luogu.org/problem/P3439
+    https://www.luogu.org/problem/P4830 
+
+    2019-09-25 4
+    https://www.luogu.org/problem/P1402 
+    https://www.luogu.org/problem/P1841 
+    http://poj.org/problem?id=2553
+    http://poj.org/problem?id=1780 
+
+    2019-09-26 4
+    https://www.luogu.org/problem/P3219 
+    https://www.lydsy.com/JudgeOnline/problem.php?id=2731
+    https://loj.ac/problem/2240 
+    https://www.lydsy.com/JudgeOnline/problem.php?id=3505
+
+    2019-09-27 4
+    https://www.luogu.org/problem/P4824
+    https://vjudge.net/problem/CodeForces-625B
+    https://vjudge.net/problem/CodeForces-96B
+    https://www.luogu.org/problem/P1368
+
+    2019-09-28 8
+    http://acm.hdu.edu.cn/showproblem.php?pid=2108
+    https://www.luogu.org/problem/P4894
+    https://vjudge.net/problem/HDU-1864
+    https://vjudge.net/problem/CodeForces-50D
+    https://www.luogu.org/problem/P1354
+    https://www.luogu.org/problem/P3244
+    https://loj.ac/problem/2115
+    https://vjudge.net/problem/CodeForces-4D
+
+    2019-09-29 4 (7 expected)
+    http://acm.hdu.edu.cn/showproblem.php?pid=5248
+    https://www.luogu.org/problem/P3575
+    https://loj.ac/problem/2054
+    https://www.luogu.org/problem/P3398
+
+    2019-09-30 2 (4 expected)
+    https://vjudge.net/problem/CodeForces-652D
+    https://vjudge.net/problem/CodeForces-703D
+
+    2019-10-01 12 (4 expected)
+    https://loj.ac/problem/4
+    https://loj.ac/problem/110
+    https://www.51nod.com/Challenge/Problem.html#problemId=1675
+    https://loj.ac/problem/3043
+    https://www.luogu.org/problem/P3382
+    https://vjudge.net/problem/CodeForces-226C
+    https://vjudge.net/problem/CodeForces-227E
+    https://vjudge.net/problem/CodeForces-582A
+    https://vjudge.net/problem/CodeForces-1114C
+    https://vjudge.net/problem/CodeForces-286A
+    https://vjudge.net/problem/CodeForces-456B
+    https://vjudge.net/problem/CodeForces-322B
+
+    2019-10-02 11 (4 expected)
+    https://www.luogu.org/problem/P4409
+    https://vjudge.net/problem/CodeForces-468A
+    https://vjudge.net/problem/CodeForces-460B
+    https://vjudge.net/problem/CodeForces-325B
+    https://vjudge.net/problem/CodeForces-319A
+    https://vjudge.net/problem/CodeForces-444A
+    https://vjudge.net/problem/CodeForces-526C
+    https://vjudge.net/problem/CodeForces-776E
+    https://vjudge.net/problem/CodeForces-258D
+    https://loj.ac/problem/2499
+    https://www.luogu.org/problem/P1351
+
+    2019-10-03 7 (4 expected)
+    https://loj.ac/problem/6584
+    https://loj.ac/problem/2558
+    https://www.luogu.org/problem/P4211
+    https://vjudge.net/problem/CodeForces-461B
+    https://www.luogu.org/problem/P1600
+    https://loj.ac/problem/2359
+    https://vjudge.net/problem/CodeForces-306C
+
+    (近期bzoj爆炸了。。。)
+    2019-10-04 15 (expected 4)
+    https://vjudge.net/problem/CodeForces-791D
+    https://vjudge.net/problem/CodeForces-318B
+    https://www.luogu.org/problem/P1404
+    https://vjudge.net/problem/AtCoder-3858
+    https://loj.ac/problem/3
+    https://loj.ac/problem/109
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=4773
+    https://vjudge.net/problem/AtCoder-2671
+    https://www.luogu.org/problem/P1792
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=2151
+    http://poj.org/problem?id=3045
+    https://vjudge.net/problem/CodeForces-520C
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=2006
+    https://www.luogu.org/problem/P2048
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=2463
+
+    2019-09-05 10 (4 expected)
+    https://vjudge.net/problem/Gym-101205D
+    http://poj.org/problem?id=1704
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=1188
+    https://www.luogu.org/problem/P3185
+    https://vjudge.net/problem/CodeForces-438D
+    https://vjudge.net/problem/CodeForces-292E
+    https://vjudge.net/problem/AtCoder-2300
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=3083
+    https://www.luogu.org/problem/P3979
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=3105
+
+    2019-10-06 11 (4 expected)
+    https://loj.ac/problem/113
+    https://www.luogu.org/problem/P3812
+    https://loj.ac/problem/2457
+    https://www.luogu.org/problem/P4301
+    https://vjudge.net/problem/CodeForces-732D
+    https://vjudge.net/problem/CodeForces-437C
+    https://vjudge.net/problem/CodeForces-1234A
+    https://vjudge.net/problem/CodeForces-392E
+    https://vjudge.net/problem/CodeForces-510C
+    https://www.luogu.org/problem/P4568
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=2763
+
+    2019-10-07 10 (4 expected)
+    https://vjudge.net/problem/CodeForces-550D
+    https://www.luogu.org/problem/P3628
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=1911
+    https://vjudge.net/problem/CodeForces-660F
+    https://vjudge.net/problem/CodeForces-432A
+    https://vjudge.net/problem/CodeForces-570C
+    http://www.51nod.com/Challenge/Problem.html#problemId=1995
+    https://vjudge.net/problem/CodeForces-449B
+    http://www.51nod.com/Challenge/Problem.html#problemId=1060
+    http://www.51nod.com/Challenge/Problem.html#problemId=1275
+
+    2019-10-08 5 (4 expected)
+    http://www.51nod.com/Challenge/Problem.html#problemId=1140
+    http://www.51nod.com/Challenge/Problem.html#problemId=1239
+    http://www.51nod.com/Challenge/Problem.html#problemId=1244
+    https://vjudge.net/problem/CodeForces-359C
+    https://vjudge.net/problem/CodeForces-837E
+
+    2019-10-09 5 (4 expected)
+    https://vjudge.net/problem/CodeForces-300E
+    https://vjudge.net/problem/CodeForces-639B
+    http://www.51nod.com/Challenge/Problem.html#problemId=2621
+    http://www.51nod.com/Challenge/Problem.html#problemId=1405
+    https://www.luogu.org/problem/P2766
+
+    2019-10-10 4 
+    https://www.luogu.org/problem/P1899
+    https://www.luogu.org/problem/P1156
+    https://www.luogu.org/problem/P4438
+    https://loj.ac/problem/2510
+
+    2019-10-11 5 (4 expected)
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=4327
+    https://www.luogu.org/problem/P5231
+    * https://www.lydsy.com/JudgeOnline/problem.php?id=2882
+    http://acm.hdu.edu.cn/showproblem.php?pid=3374
+    http://acm.hdu.edu.cn/showproblem.php?pid=3068
+
+    2019-10-12 5 (8 expected)
+    https://vjudge.net/problem/CodeForces-613A
+    https://vjudge.net/problem/CodeForces-618C
+    https://vjudge.net/problem/CodeForces-618B
+    http://www.51nod.com/Challenge/Problem.html#problemId=1639
+
+    2019-10-13 7 
+    https://vjudge.net/problem/AtCoder-3943
+    http://www.51nod.com/Challenge/Problem.html#problemId=1743
+    https://vjudge.net/problem/CodeForces-235A
+    https://vjudge.net/problem/CodeForces-699C
+    https://vjudge.net/problem/CodeForces-1228D
+    https://vjudge.net/problem/CodeForces-1220B
+    https://vjudge.net/problem/CodeForces-1209A
+
+    2019-10-14 5
+    http://poj.org/problem?id=2528
+    https://vjudge.net/problem/CodeForces-493B
+    https://www.luogu.org/problem/P3740
+    http://acm.hdu.edu.cn/showproblem.php?pid=3397
+    http://acm.hdu.edu.cn/showproblem.php?pid=3974
+
+    2019-10-15 5
+    http://www.51nod.com/Challenge/Problem.html#problemId=1536
+    http://www.51nod.com/Challenge/Problem.html#problemId=1496
+    http://poj.org/problem?id=3518
+    http://poj.org/problem?id=1595
+    http://acm.hdu.edu.cn/showproblem.php?pid=1319
+
+    2019-10-16 4
+    https://www.luogu.org/problem/P3520
+    https://loj.ac/problem/2162
+    https://www.luogu.org/problem/P1073
+    https://loj.ac/problem/2590
+
+    2019-10-17 5
+    https://vjudge.net/problem/CodeForces-576A
+    https://vjudge.net/problem/CodeForces-149D
+    http://poj.org/problem?id=1651
+    http://acm.hdu.edu.cn/showproblem.php?pid=1176
+
+    2019-10-18 4
+    http://acm.hdu.edu.cn/showproblem.php?pid=1260
+    http://acm.hdu.edu.cn/showproblem.php?pid=2243
+    http://www.51nod.com/Challenge/Problem.html#problemId=1277
+    https://vjudge.net/problem/CodeForces-745A
+
+    2019-10-19 4
+    https://www.luogu.org/problem/P3909
+    http://www.51nod.com/Challenge/Problem.html#problemId=1301
+    https://vjudge.net/problem/CodeForces-24D
+    https://vjudge.net/problem/CodeForces-627A
+
+    2019-10-20 7
+    https://www.luogu.org/problem/P2060
+    https://www.luogu.org/problem/P3528 
+    https://loj.ac/problem/2170
+    http://acm.hdu.edu.cn/showproblem.php?pid=6410
+    https://vjudge.net/problem/CodeForces-629B 
+    https://loj.ac/problem/2314
+    https://www.luogu.org/problem/P5495
+    http://acm.hdu.edu.cn/showproblem.php?pid=3911
+
+    2019-10-21 4
+    https://vjudge.net/problem/CodeForces-400E
+    https://vjudge.net/problem/CodeForces-629D
+    http://www.51nod.com/Challenge/Problem.html#problemId=1672
+    https://www.luogu.org/problem/P3602
+
+    2019-10-22 4
+    https://www.luogu.org/problem/P3598
+    http://www.51nod.com/Challenge/Problem.html#problemId=1247 
+    http://www.51nod.com/Challenge/Problem.html#problemId=1486
+    https://vjudge.net/problem/CodeForces-294C
+
+    2019-10-23 4
+    http://poj.org/problem?id=2376
+    http://acm.hdu.edu.cn/showproblem.php?pid=2037
+    https://vjudge.net/problem/CodeForces-510E 
+    https://vjudge.net/problem/CodeForces-808F
+
+    2019-10-24 6 
+    https://www.luogu.org/problem/P2647
+    http://www.51nod.com/Challenge/Problem.html#problemId=1636
+    https://vjudge.net/problem/CodeForces-631E
+    https://www.luogu.org/problem/P1850
+    https://loj.ac/problem/2360
+    http://www.51nod.com/Challenge/Problem.html#problemId=1347
+
+    2019-10-25 6
+    http://www.51nod.com/Challenge/Problem.html#problemId=2204 
+    http://www.51nod.com/Challenge/Problem.html#problemId=1554 
+    http://acm.hdu.edu.cn/showproblem.php?pid=3746 
+    https://www.luogu.org/problem/P2102
+    https://vjudge.net/problem/CodeForces-978A
+    https://vjudge.net/problem/CodeForces-1228A
+
+    2019-10-26 4
+    http://acm.hdu.edu.cn/showproblem.php?pid=4586
+    https://vjudge.net/problem/CodeForces-16E
+    https://www.luogu.org/problem/P2114
+    https://loj.ac/problem/2244
+
+    2019-10-27 7
+    https://vjudge.net/problem/CodeForces-160A
+    https://vjudge.net/problem/CodeForces-478B
+    https://www.luogu.org/problem/P3275
+    https://www.luogu.org/problem/P1369
+    https://www.luogu.org/problem/P1314
+    https://loj.ac/problem/2600
+    https://www.51nod.com/Challenge/Problem.html#problemId=1243
+
+    2019-10-28 4
+    https://www.luogu.org/problem/P1503 
+    https://www.luogu.org/problem/P1110
+    https://www.luogu.org/problem/P1903
+    https://vjudge.net/problem/CodeForces-827C 
+
+    2019-10-29 4
+    https://www.luogu.org/problem/P4828 
+    https://www.luogu.org/problem/P2841
+    https://vjudge.net/problem/CodeForces-450B
+    https://vjudge.net/problem/CodeForces-964C
+
+    2019-10-30 8 
+    blog: Tarjan's algorithms about GT
+    https://www.luogu.org/problem/P1726
+    https://www.luogu.org/problem/P3388
+    https://www.luogu.org/problem/P2002
+    http://acm.hdu.edu.cn/showproblem.php?pid=4738
+    http://poj.org/problem?id=1144
+    https://www.luogu.org/problem/P2746
+    http://poj.org/problem?id=1236
+    http://poj.org/problem?id=3177
+
+    2019-10-31 3
+    https://vjudge.net/problem/CodeForces-319C
+    http://poj.org/problem?id=1160
+    https://www.luogu.org/problem/P2029
+
+BlogStack:
+ProblemSet:
+
+好好学习:
+    网络流建图
+    仙人掌
+    AC自动机
+课程:
+    基础算法(贪心,DP,搜索,倍增,二分)
+    数据结构I
+    数据结构II
+    DP重点
+    期望概率
+    网络流
+    生成树/最短路
+    Tarjan系列
+    字符串(KMP,TRIE,AC自动机)
+    数学知识(组合数学,各种数论)

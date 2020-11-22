@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b50f9477.js","daovoice")
+  daovoice('init', {
+      app_id: "b50f9477"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Flandre.ico?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.7.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+  <meta name="description" content="看以下的所有题解之前，务必ReadMe纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。CF699D Link Tag:并查集，树形结构 51nod 1984 Link Tag:整除分块，位运算 洛股♂ 4185 Link Tag:并查集，树形结构洛股♂ 2127 LinkTag:贪心，并查集，乱搞 洛股♂ 3209 Link Tag:并查集，图论 CF820D Li">
+<meta name="keywords" content="各种OJ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LightningUZ の 做题记录(各种OJ)">
+<meta property="og:url" content="https://lightninguz2.github.io/2020/02/10/LightningUZ-の-做题记录(各种OJ)(以前的老博客)/index.html">
+<meta property="og:site_name" content="Flandre Scarlet 的小屋">
+<meta property="og:description" content="看以下的所有题解之前，务必ReadMe纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。CF699D Link Tag:并查集，树形结构 51nod 1984 Link Tag:整除分块，位运算 洛股♂ 4185 Link Tag:并查集，树形结构洛股♂ 2127 LinkTag:贪心，并查集，乱搞 洛股♂ 3209 Link Tag:并查集，图论 CF820D Li">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-30T14:22:19.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LightningUZ の 做题记录(各种OJ)">
+<meta name="twitter:description" content="看以下的所有题解之前，务必ReadMe纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。CF699D Link Tag:并查集，树形结构 51nod 1984 Link Tag:整除分块，位运算 洛股♂ 4185 Link Tag:并查集，树形结构洛股♂ 2127 LinkTag:贪心，并查集，乱搞 洛股♂ 3209 Link Tag:并查集，图论 CF820D Li">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Flandre Scarlet 的小屋" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://lightninguz2.github.io/2020/02/10/LightningUZ-の-做题记录(各种OJ)(以前的老博客)/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>LightningUZ の 做题记录(各种OJ) | Flandre Scarlet 的小屋</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="/js/love.js"></script>
+  <!-- 爆炸红心效果 -->
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/firework.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+  <link href="/js/google-code-prettify/Atelier-lakeside-Light.min.css" type="text/css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+   $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+ })    
+</script>
+
+<script src="/live2d-widget/autoload.js"></script>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- 插入音乐 -->
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+
+
+  <!-- 樱花特效 -->
+  <script src="https://lightninguz2.github.io/js/src/Sakura.js"></script>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Flandre Scarlet 的小屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    持续更新中...
+    
+      
+        <p class="site-subtitle">LightningUZ 的博客</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>介绍</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-links">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-address-book"></i> <br>友链</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-addons">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/addons/" rel="section"><i class="menu-item-icon fa fa-fw fa-tv"></i> <br>附加功能</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-games">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/addons/games" rel="section"><i class="menu-item-icon fa fa-fw fa-play"></i> <br>游戏</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lightninguz2.github.io/2020/02/10/LightningUZ-の-做题记录(各种OJ)(以前的老博客)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LightningUZ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/zps-avatar-new.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Flandre Scarlet 的小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LightningUZ の 做题记录(各种OJ)
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-10 00:32:33" itemprop="dateCreated datePublished" datetime="2020-02-10T00:32:33+08:00">2020-02-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 22:22:19" itemprop="dateModified" datetime="2019-08-30T22:22:19+08:00">2019-08-30</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数： 1.2k 字</span>
+                
+                <span title="本文字数"></span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长  &asymp; 5 分钟</span>
+                
+                <span title="阅读时长"></span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="看以下的所有题解之前，务必ReadMe"><a href="#看以下的所有题解之前，务必ReadMe" class="headerlink" title="看以下的所有题解之前，务必ReadMe"></a>看以下的所有题解之前，务必<a href="https://blog.csdn.net/LightningUZ/article/details/88958349" target="_blank" rel="noopener">ReadMe</a></h1><h1 id="纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。"><a href="#纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。" class="headerlink" title="纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。"></a>纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。</h1><h3 id="CF699D-Link"><a href="#CF699D-Link" class="headerlink" title="CF699D Link"></a>CF699D <a href="https://blog.csdn.net/LightningUZ/article/details/88878374" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，树形结构"><a href="#Tag-并查集，树形结构" class="headerlink" title="Tag:并查集，树形结构"></a>Tag:并查集，树形结构</h3></blockquote>
+<h3 id="51nod-1984-Link"><a href="#51nod-1984-Link" class="headerlink" title="51nod 1984 Link"></a>51nod 1984 <a href="https://blog.csdn.net/LightningUZ/article/details/88917775" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-整除分块，位运算"><a href="#Tag-整除分块，位运算" class="headerlink" title="Tag:整除分块，位运算"></a>Tag:整除分块，位运算</h3></blockquote>
+<h3 id="洛股♂-4185-Link"><a href="#洛股♂-4185-Link" class="headerlink" title="洛股♂ 4185 Link"></a>洛股♂ 4185 <a href="https://blog.csdn.net/LightningUZ/article/details/88936162" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，树形结构-1"><a href="#Tag-并查集，树形结构-1" class="headerlink" title="Tag:并查集，树形结构"></a>Tag:并查集，树形结构</h3><h3 id="洛股♂-2127-Link"><a href="#洛股♂-2127-Link" class="headerlink" title="洛股♂ 2127 Link"></a>洛股♂ 2127 <a href="https://blog.csdn.net/LightningUZ/article/details/88981105" target="_blank" rel="noopener">Link</a></h3><h3 id="Tag-贪心，并查集，乱搞"><a href="#Tag-贪心，并查集，乱搞" class="headerlink" title="Tag:贪心，并查集，乱搞"></a>Tag:贪心，并查集，乱搞</h3></blockquote>
+<h3 id="洛股♂-3209-Link"><a href="#洛股♂-3209-Link" class="headerlink" title="洛股♂ 3209 Link"></a>洛股♂ 3209 <a href="https://blog.csdn.net/LightningUZ/article/details/88980889" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，图论"><a href="#Tag-并查集，图论" class="headerlink" title="Tag:并查集，图论"></a>Tag:并查集，图论</h3></blockquote>
+<h3 id="CF820D-Link"><a href="#CF820D-Link" class="headerlink" title="CF820D Link"></a>CF820D <a href="https://blog.csdn.net/LightningUZ/article/details/88982665" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-模拟，思维"><a href="#Tag-模拟，思维" class="headerlink" title="Tag:模拟，思维"></a>Tag:模拟，思维</h3><h3 id="CF992D-Link"><a href="#CF992D-Link" class="headerlink" title="CF992D Link"></a>CF992D <a href="https://blog.csdn.net/LightningUZ/article/details/89035655" target="_blank" rel="noopener">Link</a></h3><h3 id="Tag-模拟，数学"><a href="#Tag-模拟，数学" class="headerlink" title="Tag:模拟，数学"></a>Tag:模拟，数学</h3></blockquote>
+<h3 id="CF1140C-Link"><a href="#CF1140C-Link" class="headerlink" title="CF1140C Link"></a>CF1140C <a href="https://blog.csdn.net/LightningUZ/article/details/89036190" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-贪心，思维"><a href="#Tag-贪心，思维" class="headerlink" title="Tag:贪心，思维"></a>Tag:贪心，思维</h3></blockquote>
+<h3 id="CF955C-Link"><a href="#CF955C-Link" class="headerlink" title="CF955C Link"></a>CF955C <a href="https://blog.csdn.net/LightningUZ/article/details/89040080" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论，数学"><a href="#Tag-数论，数学" class="headerlink" title="Tag:数论，数学"></a>Tag:数论，数学</h3></blockquote>
+<h3 id="CF1029D-Link"><a href="#CF1029D-Link" class="headerlink" title="CF1029D Link"></a>CF1029D <a href="https://blog.csdn.net/LightningUZ/article/details/89041184" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论，数学-1"><a href="#Tag-数论，数学-1" class="headerlink" title="Tag:数论，数学"></a>Tag:数论，数学</h3><h3 id="bzoj-4659-Link"><a href="#bzoj-4659-Link" class="headerlink" title="bzoj 4659 Link"></a>bzoj 4659 <a href="https://blog.csdn.net/LightningUZ/article/details/89003801" target="_blank" rel="noopener">Link</a></h3><h3 id="Tag-数论，数学，莫比乌斯反演"><a href="#Tag-数论，数学，莫比乌斯反演" class="headerlink" title="Tag:数论，数学，莫比乌斯反演"></a>Tag:数论，数学，莫比乌斯反演</h3></blockquote>
+<h3 id="洛股♂-5199-Link"><a href="#洛股♂-5199-Link" class="headerlink" title="洛股♂ 5199 Link"></a>洛股♂ 5199 <a href="https://blog.csdn.net/LightningUZ/article/details/89047457" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-排序，贪心，思维"><a href="#Tag-排序，贪心，思维" class="headerlink" title="Tag:排序，贪心，思维"></a>Tag:排序，贪心，思维</h3></blockquote>
+<h3 id="洛股♂-3800-Link"><a href="#洛股♂-3800-Link" class="headerlink" title="洛股♂ 3800 Link"></a>洛股♂ 3800 <a href="https://blog.csdn.net/LightningUZ/article/details/89075393" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列优化，DP"><a href="#Tag-单调队列优化，DP" class="headerlink" title="Tag:单调队列优化，DP"></a>Tag:单调队列优化，DP</h3></blockquote>
+<h3 id="洛股♂-1169-Link"><a href="#洛股♂-1169-Link" class="headerlink" title="洛股♂ 1169 Link"></a>洛股♂ 1169 <a href="https://blog.csdn.net/LightningUZ/article/details/89076085" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-DP（偷偷备注一句是悬线DP）"><a href="#Tag-DP（偷偷备注一句是悬线DP）" class="headerlink" title="Tag:DP（偷偷备注一句是悬线DP）"></a>Tag:DP（偷偷备注一句是悬线DP）</h3></blockquote>
+<h3 id="bzoj-1127-Link"><a href="#bzoj-1127-Link" class="headerlink" title="bzoj 1127 Link"></a>bzoj 1127 <a href="https://blog.csdn.net/LightningUZ/article/details/89108722" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-悬线DP"><a href="#Tag-悬线DP" class="headerlink" title="Tag:悬线DP"></a>Tag:悬线DP</h3></blockquote>
+<h3 id="洛股♂-3512-Link"><a href="#洛股♂-3512-Link" class="headerlink" title="洛股♂ 3512 Link"></a>洛股♂ 3512 <a href="https://blog.csdn.net/LightningUZ/article/details/89161242" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列"><a href="#Tag-单调队列" class="headerlink" title="Tag:单调队列"></a>Tag:单调队列</h3></blockquote>
+<h3 id="bzoj-1233-Link"><a href="#bzoj-1233-Link" class="headerlink" title="bzoj 1233 Link"></a>bzoj 1233 <a href="https://blog.csdn.net/LightningUZ/article/details/89256295" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列，DP"><a href="#Tag-单调队列，DP" class="headerlink" title="Tag:单调队列，DP"></a>Tag:单调队列，DP</h3></blockquote>
+<h3 id="CF185A-Link"><a href="#CF185A-Link" class="headerlink" title="CF185A Link"></a>CF185A <a href="https://blog.csdn.net/LightningUZ/article/details/89258934" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论，数学-2"><a href="#Tag-数论，数学-2" class="headerlink" title="Tag:数论，数学"></a>Tag:数论，数学</h3></blockquote>
+<h3 id="bzoj-3231-Link"><a href="#bzoj-3231-Link" class="headerlink" title="bzoj 3231 Link"></a>bzoj 3231 <a href="https://blog.csdn.net/LightningUZ/article/details/89288883" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-矩阵乘法，数学"><a href="#Tag-矩阵乘法，数学" class="headerlink" title="Tag:矩阵乘法，数学"></a>Tag:矩阵乘法，数学</h3></blockquote>
+<h3 id="HDU-3530-Link"><a href="#HDU-3530-Link" class="headerlink" title="HDU 3530 Link"></a>HDU 3530 <a href="https://blog.csdn.net/LightningUZ/article/details/89321757" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列-1"><a href="#Tag-单调队列-1" class="headerlink" title="Tag:单调队列"></a>Tag:单调队列</h3></blockquote>
+<h3 id="洛谷-2564-Link"><a href="#洛谷-2564-Link" class="headerlink" title="洛谷 2564 Link"></a>洛谷 2564 <a href="https://blog.csdn.net/LightningUZ/article/details/89337327" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-队列-瞎搞"><a href="#Tag-队列-瞎搞" class="headerlink" title="Tag:队列,瞎搞"></a>Tag:队列,瞎搞</h3></blockquote>
+<h3 id="洛谷-2216-Link"><a href="#洛谷-2216-Link" class="headerlink" title="洛谷 2216 Link"></a>洛谷 2216 <a href="https://blog.csdn.net/LightningUZ/article/details/89340734" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列-2"><a href="#Tag-单调队列-2" class="headerlink" title="Tag:单调队列"></a>Tag:单调队列</h3><h3 id="HDU-2196-Link"><a href="#HDU-2196-Link" class="headerlink" title="HDU 2196 Link"></a>HDU 2196 <a href="https://blog.csdn.net/LightningUZ/article/details/89407047" target="_blank" rel="noopener">Link</a></h3><h3 id="Tag-树形DP（很难-经典的树形DP）"><a href="#Tag-树形DP（很难-经典的树形DP）" class="headerlink" title="Tag:树形DP（很难+经典的树形DP）"></a>Tag:树形DP（很难+经典的树形DP）</h3></blockquote>
+<h3 id="bzoj-3747-Link"><a href="#bzoj-3747-Link" class="headerlink" title="bzoj 3747 Link"></a>bzoj 3747 <a href="https://blog.csdn.net/LightningUZ/article/details/89433370" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-线段树"><a href="#Tag-线段树" class="headerlink" title="Tag:线段树"></a>Tag:线段树</h3></blockquote>
+<h3 id="CF401C-Link"><a href="#CF401C-Link" class="headerlink" title="CF401C Link"></a>CF401C <a href="https://blog.csdn.net/LightningUZ/article/details/89433745" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-构造"><a href="#Tag-构造" class="headerlink" title="Tag:构造"></a>Tag:构造</h3></blockquote>
+<h3 id="洛谷-1196-Link"><a href="#洛谷-1196-Link" class="headerlink" title="洛谷 1196 Link"></a>洛谷 1196 <a href="https://blog.csdn.net/LightningUZ/article/details/89523273" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，思维"><a href="#Tag-并查集，思维" class="headerlink" title="Tag:并查集，思维"></a>Tag:并查集，思维</h3></blockquote>
+<h3 id="洛谷-5122-Link"><a href="#洛谷-5122-Link" class="headerlink" title="洛谷 5122 Link"></a>洛谷 5122 <a href="https://blog.csdn.net/LightningUZ/article/details/89523860" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-图论，建图"><a href="#Tag-图论，建图" class="headerlink" title="Tag:图论，建图"></a>Tag:图论，建图</h3></blockquote>
+<h3 id="洛谷-3140-Link"><a href="#洛谷-3140-Link" class="headerlink" title="洛谷 3140 Link"></a>洛谷 3140 <a href="https://blog.csdn.net/LightningUZ/article/details/89525017" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-DP"><a href="#Tag-DP" class="headerlink" title="Tag:DP"></a>Tag:DP</h3></blockquote>
+<h3 id="HDU-5663-Link"><a href="#HDU-5663-Link" class="headerlink" title="HDU 5663 Link"></a>HDU 5663 <a href="https://blog.csdn.net/LightningUZ/article/details/89608070" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-莫比乌斯反演"><a href="#Tag-莫比乌斯反演" class="headerlink" title="Tag:莫比乌斯反演"></a>Tag:莫比乌斯反演</h3></blockquote>
+<h3 id="CF-508E-Link"><a href="#CF-508E-Link" class="headerlink" title="CF 508E Link"></a>CF 508E <a href="https://blog.csdn.net/LightningUZ/article/details/89644996" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-构造，贪心"><a href="#Tag-构造，贪心" class="headerlink" title="Tag:构造，贪心"></a>Tag:构造，贪心</h3></blockquote>
+<h3 id="洛谷-4083-题解-Link"><a href="#洛谷-4083-题解-Link" class="headerlink" title="洛谷 4083 题解 Link"></a>洛谷 4083 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89646042" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-思维，阅读理解，BFS"><a href="#Tag-思维，阅读理解，BFS" class="headerlink" title="Tag:思维，阅读理解，BFS"></a>Tag:思维，阅读理解，BFS</h3></blockquote>
+<h3 id="POJ-1141-题解-Link"><a href="#POJ-1141-题解-Link" class="headerlink" title="POJ 1141 题解 Link"></a>POJ 1141 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89646428" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-区间DP"><a href="#Tag-区间DP" class="headerlink" title="Tag:区间DP"></a>Tag:区间DP</h3></blockquote>
+<h3 id="POJ-3017-题解-Link"><a href="#POJ-3017-题解-Link" class="headerlink" title="POJ 3017 题解 Link"></a>POJ 3017 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89408220" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列-DP"><a href="#Tag-单调队列-DP" class="headerlink" title="Tag:单调队列,DP"></a>Tag:单调队列,DP</h3></blockquote>
+<h3 id="洛谷-2698-题解-Link"><a href="#洛谷-2698-题解-Link" class="headerlink" title="洛谷 2698 题解 Link"></a>洛谷 2698 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89716090" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列-3"><a href="#Tag-单调队列-3" class="headerlink" title="Tag:单调队列"></a>Tag:单调队列</h3></blockquote>
+<h3 id="洛谷-1829-题解-Link"><a href="#洛谷-1829-题解-Link" class="headerlink" title="洛谷 1829 题解 Link"></a>洛谷 1829 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89764444" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-莫比乌斯反演-1"><a href="#Tag-莫比乌斯反演-1" class="headerlink" title="Tag:莫比乌斯反演"></a>Tag:莫比乌斯反演</h3></blockquote>
+<h3 id="洛谷-3069-题解-Link"><a href="#洛谷-3069-题解-Link" class="headerlink" title="洛谷 3069 题解 Link"></a>洛谷 3069 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89765341" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-单调队列（尺取）"><a href="#Tag-单调队列（尺取）" class="headerlink" title="Tag:单调队列（尺取）"></a>Tag:单调队列（尺取）</h3></blockquote>
+<h3 id="洛谷-4139-题解-Link"><a href="#洛谷-4139-题解-Link" class="headerlink" title="洛谷 4139 题解 Link"></a>洛谷 4139 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89788731" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-欧拉定理"><a href="#Tag-欧拉定理" class="headerlink" title="Tag:欧拉定理"></a>Tag:欧拉定理</h3></blockquote>
+<h3 id="CF-75C-题解-Link"><a href="#CF-75C-题解-Link" class="headerlink" title="CF 75C 题解 Link"></a>CF 75C 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89816994" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论，数学，二分答案"><a href="#Tag-数论，数学，二分答案" class="headerlink" title="Tag:数论，数学，二分答案"></a>Tag:数论，数学，二分答案</h3></blockquote>
+<h3 id="洛谷-2339-题解-Link"><a href="#洛谷-2339-题解-Link" class="headerlink" title="洛谷 2339 题解 Link"></a>洛谷 2339 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89817426" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-区间DP-1"><a href="#Tag-区间DP-1" class="headerlink" title="Tag:区间DP"></a>Tag:区间DP</h3></blockquote>
+<h3 id="洛谷-2887-题解-Link"><a href="#洛谷-2887-题解-Link" class="headerlink" title="洛谷 2887 题解  Link"></a>洛谷 2887 题解  <a href="https://blog.csdn.net/LightningUZ/article/details/89819796" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-贪心"><a href="#Tag-贪心" class="headerlink" title="Tag:贪心"></a>Tag:贪心</h3></blockquote>
+<h3 id="bzoj-2467-题解-Link"><a href="#bzoj-2467-题解-Link" class="headerlink" title="bzoj 2467 题解 Link"></a>bzoj 2467 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89891429" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-生成树，组合数学"><a href="#Tag-生成树，组合数学" class="headerlink" title="Tag:生成树，组合数学"></a>Tag:生成树，组合数学</h3></blockquote>
+<h3 id="CF-813D-题解-Link"><a href="#CF-813D-题解-Link" class="headerlink" title="CF 813D 题解 Link"></a>CF 813D 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/89892071" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-DP-1"><a href="#Tag-DP-1" class="headerlink" title="Tag:DP"></a>Tag:DP</h3></blockquote>
+<h3 id="HDU-6370-题解-Link"><a href="#HDU-6370-题解-Link" class="headerlink" title="HDU 6370 题解 Link"></a>HDU 6370 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90083594" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，图论，DFS"><a href="#Tag-并查集，图论，DFS" class="headerlink" title="Tag:并查集，图论，DFS"></a>Tag:并查集，图论，DFS</h3></blockquote>
+<h3 id="HDU-1496-题解-Link"><a href="#HDU-1496-题解-Link" class="headerlink" title="HDU 1496 题解 Link"></a>HDU 1496 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90112019" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论，map"><a href="#Tag-数论，map" class="headerlink" title="Tag:数论，map"></a>Tag:数论，map</h3></blockquote>
+<h3 id="AtCoder-AGC006D（LgAT2165）-题解-Link"><a href="#AtCoder-AGC006D（LgAT2165）-题解-Link" class="headerlink" title="AtCoder AGC006D（LgAT2165） 题解 Link"></a>AtCoder AGC006D（LgAT2165） 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90114941" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-AtCoder风格，二分答案"><a href="#Tag-AtCoder风格，二分答案" class="headerlink" title="Tag:AtCoder风格，二分答案"></a>Tag:AtCoder风格，二分答案</h3></blockquote>
+<h3 id="HDU-4578-题解-Link"><a href="#HDU-4578-题解-Link" class="headerlink" title="HDU 4578 题解 Link"></a>HDU 4578 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90115478" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-线段树-1"><a href="#Tag-线段树-1" class="headerlink" title="Tag:线段树"></a>Tag:线段树</h3></blockquote>
+<h3 id="洛谷-2220-题解-Link"><a href="#洛谷-2220-题解-Link" class="headerlink" title="洛谷 2220 题解 Link"></a>洛谷 2220 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90143389" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：组合数学-离散化"><a href="#Tag：组合数学-离散化" class="headerlink" title="Tag：组合数学,离散化"></a>Tag：组合数学,离散化</h3></blockquote>
+<h3 id="洛谷-3216-题解-Link"><a href="#洛谷-3216-题解-Link" class="headerlink" title="洛谷 3216 题解 Link"></a>洛谷 3216 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90145874" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-矩阵快速幂"><a href="#Tag-矩阵快速幂" class="headerlink" title="Tag:矩阵快速幂"></a>Tag:矩阵快速幂</h3></blockquote>
+<h3 id="HDU-5493-题解-Link"><a href="#HDU-5493-题解-Link" class="headerlink" title="HDU 5493 题解 Link"></a>HDU 5493 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90215500" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-线段树-2"><a href="#Tag-线段树-2" class="headerlink" title="Tag:线段树"></a>Tag:线段树</h3><h3 id="bzoj-4034-题解-Link"><a href="#bzoj-4034-题解-Link" class="headerlink" title="bzoj 4034 题解 Link"></a>bzoj 4034 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90301131" target="_blank" rel="noopener">Link</a></h3><h3 id="Tag-DFS序，线段树"><a href="#Tag-DFS序，线段树" class="headerlink" title="Tag:DFS序，线段树"></a>Tag:DFS序，线段树</h3></blockquote>
+<h3 id="poj-3237-题解-Link"><a href="#poj-3237-题解-Link" class="headerlink" title="poj 3237 题解 Link"></a>poj 3237 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90490775" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-线段树，树链剖分"><a href="#Tag-线段树，树链剖分" class="headerlink" title="Tag:线段树，树链剖分"></a>Tag:线段树，树链剖分</h3></blockquote>
+<h3 id="CF-1012B-题解-Link"><a href="#CF-1012B-题解-Link" class="headerlink" title="CF 1012B 题解 Link"></a>CF 1012B 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90546002" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-思维，建图，并查集"><a href="#Tag-思维，建图，并查集" class="headerlink" title="Tag:思维，建图，并查集"></a>Tag:思维，建图，并查集</h3></blockquote>
+<h3 id="bzoj-1026-题解-Link"><a href="#bzoj-1026-题解-Link" class="headerlink" title="bzoj 1026 题解 Link"></a>bzoj 1026 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90552635" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数位DP"><a href="#Tag-数位DP" class="headerlink" title="Tag:数位DP"></a>Tag:数位DP</h3></blockquote>
+<h3 id="洛谷-2155-题解-Link"><a href="#洛谷-2155-题解-Link" class="headerlink" title="洛谷 2155 题解 Link"></a>洛谷 2155 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90554359" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数论"><a href="#Tag-数论" class="headerlink" title="Tag: 数论"></a>Tag: 数论</h3></blockquote>
+<h3 id="bzoj-3329-题解-Link"><a href="#bzoj-3329-题解-Link" class="headerlink" title="bzoj 3329 题解 Link"></a>bzoj 3329 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90573570" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数位DP，矩阵快速幂"><a href="#Tag-数位DP，矩阵快速幂" class="headerlink" title="Tag:数位DP，矩阵快速幂"></a>Tag:数位DP，矩阵快速幂</h3></blockquote>
+<h3 id="HDU-5242-题解-Link"><a href="#HDU-5242-题解-Link" class="headerlink" title="HDU 5242 题解 Link"></a>HDU 5242 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90574781" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-贪心，树链剖分思想"><a href="#Tag-贪心，树链剖分思想" class="headerlink" title="Tag:贪心，树链剖分思想"></a>Tag:贪心，树链剖分思想</h3></blockquote>
+<h3 id="CF-570E-题解-Link"><a href="#CF-570E-题解-Link" class="headerlink" title="CF 570E 题解 Link"></a>CF 570E 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90581047" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-DP-2"><a href="#Tag-DP-2" class="headerlink" title="Tag: DP"></a>Tag: DP</h3></blockquote>
+<h3 id="CF-979D-题解-Link"><a href="#CF-979D-题解-Link" class="headerlink" title="CF 979D 题解 Link"></a>CF 979D 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90618081" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-STL，乱搞"><a href="#Tag-STL，乱搞" class="headerlink" title="Tag:STL，乱搞"></a>Tag:STL，乱搞</h3></blockquote>
+<h3 id="HDU-4507-题解-Link"><a href="#HDU-4507-题解-Link" class="headerlink" title="HDU 4507 题解 Link"></a>HDU 4507 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90619068" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-数位DP（超难）"><a href="#Tag-数位DP（超难）" class="headerlink" title="Tag:数位DP（超难）"></a>Tag:数位DP（超难）</h3></blockquote>
+<h3 id="HDU-4334-题解-Link"><a href="#HDU-4334-题解-Link" class="headerlink" title="HDU 4334 题解 Link"></a>HDU 4334 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90733848" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-记忆化，单调性，思维"><a href="#Tag-记忆化，单调性，思维" class="headerlink" title="Tag:记忆化，单调性，思维"></a>Tag:记忆化，单调性，思维</h3></blockquote>
+<h3 id="CF-1043F-题解Link"><a href="#CF-1043F-题解Link" class="headerlink" title="CF 1043F 题解Link"></a>CF 1043F 题解<a href="https://blog.csdn.net/LightningUZ/article/details/90737918" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：容斥"><a href="#Tag：容斥" class="headerlink" title="Tag：容斥"></a>Tag：容斥</h3></blockquote>
+<h3 id="hdu-2842-题解-Link"><a href="#hdu-2842-题解-Link" class="headerlink" title="hdu 2842 题解 Link"></a>hdu 2842 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90738044" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：矩阵快速幂"><a href="#Tag：矩阵快速幂" class="headerlink" title="Tag：矩阵快速幂"></a>Tag：矩阵快速幂</h3></blockquote>
+<h3 id="CF-455C-题解-Link"><a href="#CF-455C-题解-Link" class="headerlink" title="CF 455C 题解 Link"></a>CF 455C 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90740488" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：直径，并查集"><a href="#Tag：直径，并查集" class="headerlink" title="Tag：直径，并查集"></a>Tag：直径，并查集</h3></blockquote>
+<h3 id="HDU-3461-题解-Link"><a href="#HDU-3461-题解-Link" class="headerlink" title="HDU 3461 题解 Link"></a>HDU 3461 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90742625" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，并查集"><a href="#Tag：思维，并查集" class="headerlink" title="Tag：思维，并查集"></a>Tag：思维，并查集</h3></blockquote>
+<h3 id="bzoj-4318-题解-Link"><a href="#bzoj-4318-题解-Link" class="headerlink" title="bzoj 4318 题解 Link"></a>bzoj 4318 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/90814087" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：期望"><a href="#Tag：期望" class="headerlink" title="Tag：期望"></a>Tag：期望</h3></blockquote>
+<h3 id="CF-280C-题解-Link"><a href="#CF-280C-题解-Link" class="headerlink" title="CF 280C 题解 Link"></a>CF 280C 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/91129923" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-期望"><a href="#Tag-期望" class="headerlink" title="Tag:期望"></a>Tag:期望</h3></blockquote>
+<h3 id="POJ-1083-题解-Link"><a href="#POJ-1083-题解-Link" class="headerlink" title="POJ 1083 题解 Link"></a>POJ 1083 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/91352153" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-思维"><a href="#Tag-思维" class="headerlink" title="Tag:思维"></a>Tag:思维</h3></blockquote>
+<h3 id="hdu-4035-题解-Link"><a href="#hdu-4035-题解-Link" class="headerlink" title="hdu 4035 题解 Link"></a>hdu 4035 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/91353953" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-期望，树形DP"><a href="#Tag-期望，树形DP" class="headerlink" title="Tag:期望，树形DP"></a>Tag:期望，树形DP</h3></blockquote>
+<h3 id="hdu-6170-题解-Link"><a href="#hdu-6170-题解-Link" class="headerlink" title="hdu 6170 题解 Link"></a>hdu 6170 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/91402619" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：字符串DP"><a href="#Tag：字符串DP" class="headerlink" title="Tag：字符串DP"></a>Tag：字符串DP</h3></blockquote>
+<h3 id="bzoj-2243-题解-Link"><a href="#bzoj-2243-题解-Link" class="headerlink" title="bzoj 2243 题解 Link"></a>bzoj 2243 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/92407669" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：线段树，树链剖分"><a href="#Tag：线段树，树链剖分" class="headerlink" title="Tag：线段树，树链剖分"></a>Tag：线段树，树链剖分</h3></blockquote>
+<h3 id="hdu-5692-题解-Link"><a href="#hdu-5692-题解-Link" class="headerlink" title="hdu 5692 题解 Link"></a>hdu 5692 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/93363731" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-DFS序"><a href="#Tag-DFS序" class="headerlink" title="Tag:DFS序"></a>Tag:DFS序</h3></blockquote>
+<h3 id="hdu-3234-题解-Link"><a href="#hdu-3234-题解-Link" class="headerlink" title="hdu 3234 题解 Link"></a>hdu 3234 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/94397581" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-并查集，思维-1"><a href="#Tag-并查集，思维-1" class="headerlink" title="Tag:并查集，思维"></a>Tag:并查集，思维</h3></blockquote>
+<h3 id="洛谷-4113-题解Link"><a href="#洛谷-4113-题解Link" class="headerlink" title="洛谷 4113 题解Link"></a>洛谷 4113 题解<a href="https://blog.csdn.net/LightningUZ/article/details/94401029" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-树状数组，瞎搞（树状数组水主席树！！！）"><a href="#Tag-树状数组，瞎搞（树状数组水主席树！！！）" class="headerlink" title="Tag:树状数组，瞎搞（树状数组水主席树！！！）"></a>Tag:树状数组，瞎搞（树状数组水主席树！！！）</h3></blockquote>
+<h3 id="bzoj-4883-题解-Link"><a href="#bzoj-4883-题解-Link" class="headerlink" title="bzoj 4883 题解 Link"></a>bzoj 4883 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/94405501" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag；思维，建图，最小基环森林"><a href="#Tag；思维，建图，最小基环森林" class="headerlink" title="Tag；思维，建图，最小基环森林"></a>Tag；思维，建图，最小基环森林</h3></blockquote>
+<h3 id="hdu-5029-题解-Link"><a href="#hdu-5029-题解-Link" class="headerlink" title="hdu 5029 题解 Link"></a>hdu 5029 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/94588570" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：树链剖分，线段树，思维"><a href="#Tag：树链剖分，线段树，思维" class="headerlink" title="Tag：树链剖分，线段树，思维"></a>Tag：树链剖分，线段树，思维</h3></blockquote>
+<h3 id="洛谷-3119-题解Link"><a href="#洛谷-3119-题解Link" class="headerlink" title="洛谷 3119 题解Link"></a>洛谷 3119 题解<a href="https://blog.csdn.net/LightningUZ/article/details/94589679" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：强连通分量，思维"><a href="#Tag：强连通分量，思维" class="headerlink" title="Tag：强连通分量，思维"></a>Tag：强连通分量，思维</h3></blockquote>
+<h3 id="洛谷-1407-题解-Link"><a href="#洛谷-1407-题解-Link" class="headerlink" title="洛谷 1407 题解 Link"></a>洛谷 1407 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/94891743" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-强连通分量，建图，思维"><a href="#Tag-强连通分量，建图，思维" class="headerlink" title="Tag:强连通分量，建图，思维"></a>Tag:强连通分量，建图，思维</h3></blockquote>
+<h3 id="poj-3926-题解-Link"><a href="#poj-3926-题解-Link" class="headerlink" title="poj 3926 题解 Link"></a>poj 3926 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/95224895" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：单调队列优化DP"><a href="#Tag：单调队列优化DP" class="headerlink" title="Tag：单调队列优化DP"></a>Tag：单调队列优化DP</h3></blockquote>
+<h3 id="AtCoder-2159-题解-Link"><a href="#AtCoder-2159-题解-Link" class="headerlink" title="AtCoder 2159 题解 Link"></a>AtCoder 2159 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/96358567" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag-STL，思维，并查集"><a href="#Tag-STL，思维，并查集" class="headerlink" title="Tag:STL，思维，并查集"></a>Tag:STL，思维，并查集</h3></blockquote>
+<h3 id="洛谷-3223-amp-bzoj-2729-题解Link"><a href="#洛谷-3223-amp-bzoj-2729-题解Link" class="headerlink" title="洛谷 3223 &amp; bzoj 2729 题解Link"></a>洛谷 3223 &amp; bzoj 2729 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96364227" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：组合数学，高精"><a href="#Tag：组合数学，高精" class="headerlink" title="Tag：组合数学，高精"></a>Tag：组合数学，高精</h3></blockquote>
+<h3 id="洛谷-2144-amp-bzoj1002-题解Link"><a href="#洛谷-2144-amp-bzoj1002-题解Link" class="headerlink" title="洛谷 2144 &amp; bzoj1002 题解Link"></a>洛谷 2144 &amp; bzoj1002 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96501534" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：找规律"><a href="#Tag：找规律" class="headerlink" title="Tag：找规律"></a>Tag：找规律</h3></blockquote>
+<h3 id="SPOJ-GSS3-题解Link"><a href="#SPOJ-GSS3-题解Link" class="headerlink" title="SPOJ GSS3 题解Link"></a>SPOJ GSS3 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96503822" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：线段树"><a href="#Tag：线段树" class="headerlink" title="Tag：线段树"></a>Tag：线段树</h3></blockquote>
+<h3 id="hdu-2795-题解-Link"><a href="#hdu-2795-题解-Link" class="headerlink" title="hdu 2795 题解 Link"></a>hdu 2795 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/96633176" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：线段树-1"><a href="#Tag：线段树-1" class="headerlink" title="Tag：线段树"></a>Tag：线段树</h3></blockquote>
+<h3 id="SPOJ-LCMSum-amp-bzoj-2226-amp-洛谷-1891-题解-Link"><a href="#SPOJ-LCMSum-amp-bzoj-2226-amp-洛谷-1891-题解-Link" class="headerlink" title="SPOJ LCMSum &amp; bzoj 2226 &amp; 洛谷 1891 题解 Link"></a>SPOJ LCMSum &amp; bzoj 2226 &amp; 洛谷 1891 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/96721446" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：数论，推式子"><a href="#Tag：数论，推式子" class="headerlink" title="Tag：数论，推式子"></a>Tag：数论，推式子</h3></blockquote>
+<h3 id="LibreOJ-515-题解Link"><a href="#LibreOJ-515-题解Link" class="headerlink" title="LibreOJ 515 题解Link"></a>LibreOJ 515 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96896601" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：bitset-DP"><a href="#Tag：bitset-DP" class="headerlink" title="Tag：bitset,DP"></a>Tag：bitset,DP</h3></blockquote>
+<h3 id="poj-2109-题解Link"><a href="#poj-2109-题解Link" class="headerlink" title="poj 2109 题解Link"></a>poj 2109 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96992706" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：瞎搞"><a href="#Tag：瞎搞" class="headerlink" title="Tag：瞎搞"></a>Tag：瞎搞</h3></blockquote>
+<h3 id="洛谷-1197-amp-bzoj-1015-题解Link"><a href="#洛谷-1197-amp-bzoj-1015-题解Link" class="headerlink" title="洛谷 1197 &amp; bzoj 1015 题解Link"></a>洛谷 1197 &amp; bzoj 1015 题解<a href="https://blog.csdn.net/LightningUZ/article/details/96993836" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：并查集，思维"><a href="#Tag：并查集，思维" class="headerlink" title="Tag：并查集，思维"></a>Tag：并查集，思维</h3></blockquote>
+<h3 id="bzoj-3997-amp-洛谷-3974-题解-Link"><a href="#bzoj-3997-amp-洛谷-3974-题解-Link" class="headerlink" title="bzoj 3997 &amp; 洛谷 3974 题解 Link"></a>bzoj 3997 &amp; 洛谷 3974 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/96725564" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：建图，图论，DP"><a href="#Tag：建图，图论，DP" class="headerlink" title="Tag：建图，图论，DP"></a>Tag：建图，图论，DP</h3></blockquote>
+<h3 id="hdu-4602-题解-Link"><a href="#hdu-4602-题解-Link" class="headerlink" title="hdu 4602 题解 Link"></a>hdu 4602 题解 <a href="https://mp.csdn.net/mdeditor/97159006" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：组合数学，推式子"><a href="#Tag：组合数学，推式子" class="headerlink" title="Tag：组合数学，推式子"></a>Tag：组合数学，推式子</h3></blockquote>
+<h3 id="hdu-4000-题解-Link"><a href="#hdu-4000-题解-Link" class="headerlink" title="hdu 4000 题解 Link"></a>hdu 4000 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97165119" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：树状数组"><a href="#Tag：树状数组" class="headerlink" title="Tag：树状数组"></a>Tag：树状数组</h3></blockquote>
+<h3 id="洛谷-4462-amp-bzoj-5301-题解-Link"><a href="#洛谷-4462-amp-bzoj-5301-题解-Link" class="headerlink" title="洛谷 4462 &amp; bzoj 5301 题解 Link"></a>洛谷 4462 &amp; bzoj 5301 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97407995" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：莫队"><a href="#Tag：莫队" class="headerlink" title="Tag：莫队"></a>Tag：莫队</h3></blockquote>
+<h3 id="洛谷-2272-amp-bzoj-1093-题解-Link"><a href="#洛谷-2272-amp-bzoj-1093-题解-Link" class="headerlink" title="洛谷 2272 &amp; bzoj 1093 题解 Link"></a>洛谷 2272 &amp; bzoj 1093 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97411327" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：强连通分量，思维-1"><a href="#Tag：强连通分量，思维-1" class="headerlink" title="Tag：强连通分量，思维"></a>Tag：强连通分量，思维</h3></blockquote>
+<h3 id="洛谷-5094-amp-poj-1990-题解-Link"><a href="#洛谷-5094-amp-poj-1990-题解-Link" class="headerlink" title="洛谷 5094 &amp; poj 1990 题解 Link"></a>洛谷 5094 &amp; poj 1990 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97541530" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：树状数组-1"><a href="#Tag：树状数组-1" class="headerlink" title="Tag：树状数组"></a>Tag：树状数组</h3></blockquote>
+<h3 id="hdu-6411-题解Link"><a href="#hdu-6411-题解Link" class="headerlink" title="hdu 6411 题解Link"></a>hdu 6411 题解<a href="https://blog.csdn.net/LightningUZ/article/details/97547998" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，好题，并查集"><a href="#Tag：思维，好题，并查集" class="headerlink" title="Tag：思维，好题，并查集"></a>Tag：思维，好题，并查集</h3></blockquote>
+<h3 id="洛谷-2320-amp-bzoj-1192-题解Link"><a href="#洛谷-2320-amp-bzoj-1192-题解Link" class="headerlink" title="洛谷 2320 &amp; bzoj 1192 题解Link"></a>洛谷 2320 &amp; bzoj 1192 题解<a href="https://blog.csdn.net/LightningUZ/article/details/97612146" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，构造"><a href="#Tag：思维，构造" class="headerlink" title="Tag：思维，构造"></a>Tag：思维，构造</h3></blockquote>
+<h3 id="poj-3735-题解-Link"><a href="#poj-3735-题解-Link" class="headerlink" title="poj 3735 题解 Link"></a>poj 3735 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97612591" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，构造-1"><a href="#Tag：思维，构造-1" class="headerlink" title="Tag：思维，构造"></a>Tag：思维，构造</h3></blockquote>
+<h3 id="poj-2478-题解Link"><a href="#poj-2478-题解Link" class="headerlink" title="poj 2478 题解Link"></a>poj 2478 题解<a href="https://blog.csdn.net/LightningUZ/article/details/97617872" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：欧拉函数"><a href="#Tag：欧拉函数" class="headerlink" title="Tag：欧拉函数"></a>Tag：欧拉函数</h3></blockquote>
+<h3 id="poj-1936-题解-Link"><a href="#poj-1936-题解-Link" class="headerlink" title="poj 1936 题解 Link"></a>poj 1936 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97640902" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：字符串"><a href="#Tag：字符串" class="headerlink" title="Tag：字符串"></a>Tag：字符串</h3></blockquote>
+<h3 id="poj-1989-amp-hdu-2712-amp-洛谷5093-题解-Link"><a href="#poj-1989-amp-hdu-2712-amp-洛谷5093-题解-Link" class="headerlink" title="poj 1989 &amp; hdu 2712 &amp; 洛谷5093 题解 Link"></a>poj 1989 &amp; hdu 2712 &amp; 洛谷5093 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97642532" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h2 id="Tag：贪心，思维，好题"><a href="#Tag：贪心，思维，好题" class="headerlink" title="Tag：贪心，思维，好题"></a>Tag：贪心，思维，好题</h2></blockquote>
+<h3 id="洛谷-1268-题解-Link"><a href="#洛谷-1268-题解-Link" class="headerlink" title="洛谷 1268 题解 Link"></a>洛谷 1268 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/97918294" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：图论，思维"><a href="#Tag：图论，思维" class="headerlink" title="Tag：图论，思维"></a>Tag：图论，思维</h3></blockquote>
+<h3 id="洛谷-2879-amp-poj-3263-题解-Link"><a href="#洛谷-2879-amp-poj-3263-题解-Link" class="headerlink" title="洛谷 2879 &amp; poj 3263 题解 Link"></a>洛谷 2879 &amp; poj 3263 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/98071624" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，前缀和"><a href="#Tag：思维，前缀和" class="headerlink" title="Tag：思维，前缀和"></a>Tag：思维，前缀和</h3></blockquote>
+<h3 id="洛谷-4588-amp-bzoj-5334-题解-Link"><a href="#洛谷-4588-amp-bzoj-5334-题解-Link" class="headerlink" title="洛谷 4588 &amp; bzoj 5334 题解 Link"></a>洛谷 4588 &amp; bzoj 5334 题解 <a href="https://mp.csdn.net/mdeditor/98085413" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：线段树，打死你也想不到是用线段树"><a href="#Tag：线段树，打死你也想不到是用线段树" class="headerlink" title="Tag：线段树，打死你也想不到是用线段树"></a>Tag：线段树，打死你也想不到是用线段树</h3></blockquote>
+<h3 id="poj-1149-题解-Link"><a href="#poj-1149-题解-Link" class="headerlink" title="poj 1149 题解 Link"></a>poj 1149 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/99112324" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：网络流，建图"><a href="#Tag：网络流，建图" class="headerlink" title="Tag：网络流，建图"></a>Tag：网络流，建图</h3></blockquote>
+<h3 id="CF-140C-题解-Link"><a href="#CF-140C-题解-Link" class="headerlink" title="CF 140C 题解 Link"></a>CF 140C 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/99303709" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：思维，贪心"><a href="#Tag：思维，贪心" class="headerlink" title="Tag：思维，贪心"></a>Tag：思维，贪心</h3></blockquote>
+<h3 id="洛谷-2509-题解-Link"><a href="#洛谷-2509-题解-Link" class="headerlink" title="洛谷 2509 题解 Link"></a>洛谷 2509 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/99575964" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：倍增，单调队列，思维，好题"><a href="#Tag：倍增，单调队列，思维，好题" class="headerlink" title="Tag：倍增，单调队列，思维，好题"></a>Tag：倍增，单调队列，思维，好题</h3></blockquote>
+<h3 id="洛谷-2774-题解-Link"><a href="#洛谷-2774-题解-Link" class="headerlink" title="洛谷 2774 题解 Link"></a>洛谷 2774 题解 <a href="https://blog.csdn.net/LightningUZ/article/details/99731107" target="_blank" rel="noopener">Link</a></h3><blockquote>
+<h3 id="Tag：最小割建图"><a href="#Tag：最小割建图" class="headerlink" title="Tag：最小割建图"></a>Tag：最小割建图</h3></blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/各种OJ/" rel="tag"># 各种OJ</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/10/hdu-5762-Teacher-Bo-题解/" rel="next" title="hdu 5762 Teacher Bo 题解">
+                <i class="fa fa-chevron-left"></i> hdu 5762 Teacher Bo 题解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/10/NOIP-历年DP贪心题/" rel="prev" title="NOIP 历年DP贪心题">
+                NOIP 历年DP贪心题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>w
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/zps-avatar-new.jpg" alt="LightningUZ">
+            
+              <p class="site-author-name" itemprop="name">LightningUZ</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">81</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          备注:左下角的看板娘有点卡,试试刷新几下看看
+
+          
+            <div id="days"></div>
+            <script>
+            function show_date_time(){
+                window.setTimeout("show_date_time()", 1000);
+                BirthDay=new Date("08/29/2019 08:00:00");
+                today=new Date();
+                timeold=(today.getTime()-BirthDay.getTime());
+                sectimeold=timeold/1000
+                secondsold=Math.floor(sectimeold);
+                msPerDay=24*60*60*1000
+                e_daysold=timeold/msPerDay
+                daysold=Math.floor(e_daysold);
+                e_hrsold=(e_daysold-daysold)*24;
+                hrsold=setzero(Math.floor(e_hrsold));
+                e_minsold=(e_hrsold-hrsold)*60;
+                minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+                seconds=setzero(Math.floor((e_minsold-minsold)*60));
+                document.getElementById('days').innerHTML="这个小窝莫名其妙地苟活了 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+            }
+            function setzero(i) {
+                if (i<10) {
+                    i="0" + i
+                };
+                return i;
+            }
+            show_date_time();
+            </script>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=106252" title="luogu &rarr; https://www.luogu.org/space/show?uid=106252" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>luogu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://space.bilibili.com/326497027" title="bilibli &rarr; https://space.bilibili.com/326497027" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>bilibli</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/LightningUZ2" title="github &rarr; https://github.com/LightningUZ2" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>github</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://fa555.github.io/" title="https://fa555.github.io/" rel="noopener" target="_blank">SD巨佬 fa_555</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://muronglin.top/" title="https://muronglin.top/" rel="noopener" target="_blank">ZJ巨佬(女) 慕容琳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://leflacon.github.io/" title="https://leflacon.github.io/" rel="noopener" target="_blank">神仙姐姐 LeFlacon</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sukazyo.cc/" title="https://sukazyo.cc/" rel="noopener" target="_blank">机房巨佬 Sukazyo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liziheng.ac.cn" title="https://www.liziheng.ac.cn" rel="noopener" target="_blank">年少有志 liziheng</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://miuyou.github.io/" title="https://miuyou.github.io/" rel="noopener" target="_blank">春待ち    Miu_you</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stapx.chuhelan.com/" title="https://stapx.chuhelan.com/" rel="noopener" target="_blank">twitter神仙 StapxSteve</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          <div id="days"></div>
+<script>
+setInterval(clock,1000);
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("08/29/2019 08:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    if (hrsold+8>24) {hrsold-=24};
+    document.getElementById('days').innerHTML="现在是 "+hrsold+":"+minsold+":"+seconds;
+    document.getElementById('days').innerHTML="这个小窝莫名其妙地苟活了 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i) {
+    if (i<10) {
+        i="0" + i
+    };
+    return i;
+}
+show_date_time();
+</script>
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#看以下的所有题解之前，务必ReadMe"><span class="nav-number">1.</span> <span class="nav-text">看以下的所有题解之前，务必ReadMe</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。"><span class="nav-number">2.</span> <span class="nav-text">纯属搬运以前的文章。由于数量比较多，我懒得导入过来，就直接到原来链接上凑合看吧。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CF699D-Link"><span class="nav-number">2.0.1.</span> <span class="nav-text">CF699D Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，树形结构"><span class="nav-number">2.0.2.</span> <span class="nav-text">Tag:并查集，树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#51nod-1984-Link"><span class="nav-number">2.0.3.</span> <span class="nav-text">51nod 1984 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-整除分块，位运算"><span class="nav-number">2.0.4.</span> <span class="nav-text">Tag:整除分块，位运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-4185-Link"><span class="nav-number">2.0.5.</span> <span class="nav-text">洛股♂ 4185 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，树形结构-1"><span class="nav-number">2.0.6.</span> <span class="nav-text">Tag:并查集，树形结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-2127-Link"><span class="nav-number">2.0.7.</span> <span class="nav-text">洛股♂ 2127 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-贪心，并查集，乱搞"><span class="nav-number">2.0.8.</span> <span class="nav-text">Tag:贪心，并查集，乱搞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-3209-Link"><span class="nav-number">2.0.9.</span> <span class="nav-text">洛股♂ 3209 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，图论"><span class="nav-number">2.0.10.</span> <span class="nav-text">Tag:并查集，图论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF820D-Link"><span class="nav-number">2.0.11.</span> <span class="nav-text">CF820D Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-模拟，思维"><span class="nav-number">2.0.12.</span> <span class="nav-text">Tag:模拟，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF992D-Link"><span class="nav-number">2.0.13.</span> <span class="nav-text">CF992D Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-模拟，数学"><span class="nav-number">2.0.14.</span> <span class="nav-text">Tag:模拟，数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1140C-Link"><span class="nav-number">2.0.15.</span> <span class="nav-text">CF1140C Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-贪心，思维"><span class="nav-number">2.0.16.</span> <span class="nav-text">Tag:贪心，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF955C-Link"><span class="nav-number">2.0.17.</span> <span class="nav-text">CF955C Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，数学"><span class="nav-number">2.0.18.</span> <span class="nav-text">Tag:数论，数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1029D-Link"><span class="nav-number">2.0.19.</span> <span class="nav-text">CF1029D Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，数学-1"><span class="nav-number">2.0.20.</span> <span class="nav-text">Tag:数论，数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-4659-Link"><span class="nav-number">2.0.21.</span> <span class="nav-text">bzoj 4659 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，数学，莫比乌斯反演"><span class="nav-number">2.0.22.</span> <span class="nav-text">Tag:数论，数学，莫比乌斯反演</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-5199-Link"><span class="nav-number">2.0.23.</span> <span class="nav-text">洛股♂ 5199 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-排序，贪心，思维"><span class="nav-number">2.0.24.</span> <span class="nav-text">Tag:排序，贪心，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-3800-Link"><span class="nav-number">2.0.25.</span> <span class="nav-text">洛股♂ 3800 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列优化，DP"><span class="nav-number">2.0.26.</span> <span class="nav-text">Tag:单调队列优化，DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-1169-Link"><span class="nav-number">2.0.27.</span> <span class="nav-text">洛股♂ 1169 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DP（偷偷备注一句是悬线DP）"><span class="nav-number">2.0.28.</span> <span class="nav-text">Tag:DP（偷偷备注一句是悬线DP）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-1127-Link"><span class="nav-number">2.0.29.</span> <span class="nav-text">bzoj 1127 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-悬线DP"><span class="nav-number">2.0.30.</span> <span class="nav-text">Tag:悬线DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛股♂-3512-Link"><span class="nav-number">2.0.31.</span> <span class="nav-text">洛股♂ 3512 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列"><span class="nav-number">2.0.32.</span> <span class="nav-text">Tag:单调队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-1233-Link"><span class="nav-number">2.0.33.</span> <span class="nav-text">bzoj 1233 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列，DP"><span class="nav-number">2.0.34.</span> <span class="nav-text">Tag:单调队列，DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF185A-Link"><span class="nav-number">2.0.35.</span> <span class="nav-text">CF185A Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，数学-2"><span class="nav-number">2.0.36.</span> <span class="nav-text">Tag:数论，数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-3231-Link"><span class="nav-number">2.0.37.</span> <span class="nav-text">bzoj 3231 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-矩阵乘法，数学"><span class="nav-number">2.0.38.</span> <span class="nav-text">Tag:矩阵乘法，数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-3530-Link"><span class="nav-number">2.0.39.</span> <span class="nav-text">HDU 3530 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列-1"><span class="nav-number">2.0.40.</span> <span class="nav-text">Tag:单调队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2564-Link"><span class="nav-number">2.0.41.</span> <span class="nav-text">洛谷 2564 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-队列-瞎搞"><span class="nav-number">2.0.42.</span> <span class="nav-text">Tag:队列,瞎搞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2216-Link"><span class="nav-number">2.0.43.</span> <span class="nav-text">洛谷 2216 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列-2"><span class="nav-number">2.0.44.</span> <span class="nav-text">Tag:单调队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-2196-Link"><span class="nav-number">2.0.45.</span> <span class="nav-text">HDU 2196 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-树形DP（很难-经典的树形DP）"><span class="nav-number">2.0.46.</span> <span class="nav-text">Tag:树形DP（很难+经典的树形DP）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-3747-Link"><span class="nav-number">2.0.47.</span> <span class="nav-text">bzoj 3747 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-线段树"><span class="nav-number">2.0.48.</span> <span class="nav-text">Tag:线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF401C-Link"><span class="nav-number">2.0.49.</span> <span class="nav-text">CF401C Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-构造"><span class="nav-number">2.0.50.</span> <span class="nav-text">Tag:构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-1196-Link"><span class="nav-number">2.0.51.</span> <span class="nav-text">洛谷 1196 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，思维"><span class="nav-number">2.0.52.</span> <span class="nav-text">Tag:并查集，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-5122-Link"><span class="nav-number">2.0.53.</span> <span class="nav-text">洛谷 5122 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-图论，建图"><span class="nav-number">2.0.54.</span> <span class="nav-text">Tag:图论，建图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-3140-Link"><span class="nav-number">2.0.55.</span> <span class="nav-text">洛谷 3140 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DP"><span class="nav-number">2.0.56.</span> <span class="nav-text">Tag:DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-5663-Link"><span class="nav-number">2.0.57.</span> <span class="nav-text">HDU 5663 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-莫比乌斯反演"><span class="nav-number">2.0.58.</span> <span class="nav-text">Tag:莫比乌斯反演</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-508E-Link"><span class="nav-number">2.0.59.</span> <span class="nav-text">CF 508E Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-构造，贪心"><span class="nav-number">2.0.60.</span> <span class="nav-text">Tag:构造，贪心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-4083-题解-Link"><span class="nav-number">2.0.61.</span> <span class="nav-text">洛谷 4083 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-思维，阅读理解，BFS"><span class="nav-number">2.0.62.</span> <span class="nav-text">Tag:思维，阅读理解，BFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJ-1141-题解-Link"><span class="nav-number">2.0.63.</span> <span class="nav-text">POJ 1141 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-区间DP"><span class="nav-number">2.0.64.</span> <span class="nav-text">Tag:区间DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJ-3017-题解-Link"><span class="nav-number">2.0.65.</span> <span class="nav-text">POJ 3017 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列-DP"><span class="nav-number">2.0.66.</span> <span class="nav-text">Tag:单调队列,DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2698-题解-Link"><span class="nav-number">2.0.67.</span> <span class="nav-text">洛谷 2698 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列-3"><span class="nav-number">2.0.68.</span> <span class="nav-text">Tag:单调队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-1829-题解-Link"><span class="nav-number">2.0.69.</span> <span class="nav-text">洛谷 1829 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-莫比乌斯反演-1"><span class="nav-number">2.0.70.</span> <span class="nav-text">Tag:莫比乌斯反演</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-3069-题解-Link"><span class="nav-number">2.0.71.</span> <span class="nav-text">洛谷 3069 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-单调队列（尺取）"><span class="nav-number">2.0.72.</span> <span class="nav-text">Tag:单调队列（尺取）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-4139-题解-Link"><span class="nav-number">2.0.73.</span> <span class="nav-text">洛谷 4139 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-欧拉定理"><span class="nav-number">2.0.74.</span> <span class="nav-text">Tag:欧拉定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-75C-题解-Link"><span class="nav-number">2.0.75.</span> <span class="nav-text">CF 75C 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，数学，二分答案"><span class="nav-number">2.0.76.</span> <span class="nav-text">Tag:数论，数学，二分答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2339-题解-Link"><span class="nav-number">2.0.77.</span> <span class="nav-text">洛谷 2339 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-区间DP-1"><span class="nav-number">2.0.78.</span> <span class="nav-text">Tag:区间DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2887-题解-Link"><span class="nav-number">2.0.79.</span> <span class="nav-text">洛谷 2887 题解  Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-贪心"><span class="nav-number">2.0.80.</span> <span class="nav-text">Tag:贪心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-2467-题解-Link"><span class="nav-number">2.0.81.</span> <span class="nav-text">bzoj 2467 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-生成树，组合数学"><span class="nav-number">2.0.82.</span> <span class="nav-text">Tag:生成树，组合数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-813D-题解-Link"><span class="nav-number">2.0.83.</span> <span class="nav-text">CF 813D 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DP-1"><span class="nav-number">2.0.84.</span> <span class="nav-text">Tag:DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-6370-题解-Link"><span class="nav-number">2.0.85.</span> <span class="nav-text">HDU 6370 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，图论，DFS"><span class="nav-number">2.0.86.</span> <span class="nav-text">Tag:并查集，图论，DFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-1496-题解-Link"><span class="nav-number">2.0.87.</span> <span class="nav-text">HDU 1496 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论，map"><span class="nav-number">2.0.88.</span> <span class="nav-text">Tag:数论，map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AtCoder-AGC006D（LgAT2165）-题解-Link"><span class="nav-number">2.0.89.</span> <span class="nav-text">AtCoder AGC006D（LgAT2165） 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-AtCoder风格，二分答案"><span class="nav-number">2.0.90.</span> <span class="nav-text">Tag:AtCoder风格，二分答案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-4578-题解-Link"><span class="nav-number">2.0.91.</span> <span class="nav-text">HDU 4578 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-线段树-1"><span class="nav-number">2.0.92.</span> <span class="nav-text">Tag:线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2220-题解-Link"><span class="nav-number">2.0.93.</span> <span class="nav-text">洛谷 2220 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：组合数学-离散化"><span class="nav-number">2.0.94.</span> <span class="nav-text">Tag：组合数学,离散化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-3216-题解-Link"><span class="nav-number">2.0.95.</span> <span class="nav-text">洛谷 3216 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-矩阵快速幂"><span class="nav-number">2.0.96.</span> <span class="nav-text">Tag:矩阵快速幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-5493-题解-Link"><span class="nav-number">2.0.97.</span> <span class="nav-text">HDU 5493 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-线段树-2"><span class="nav-number">2.0.98.</span> <span class="nav-text">Tag:线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-4034-题解-Link"><span class="nav-number">2.0.99.</span> <span class="nav-text">bzoj 4034 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DFS序，线段树"><span class="nav-number">2.0.100.</span> <span class="nav-text">Tag:DFS序，线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-3237-题解-Link"><span class="nav-number">2.0.101.</span> <span class="nav-text">poj 3237 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-线段树，树链剖分"><span class="nav-number">2.0.102.</span> <span class="nav-text">Tag:线段树，树链剖分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-1012B-题解-Link"><span class="nav-number">2.0.103.</span> <span class="nav-text">CF 1012B 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-思维，建图，并查集"><span class="nav-number">2.0.104.</span> <span class="nav-text">Tag:思维，建图，并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-1026-题解-Link"><span class="nav-number">2.0.105.</span> <span class="nav-text">bzoj 1026 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数位DP"><span class="nav-number">2.0.106.</span> <span class="nav-text">Tag:数位DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2155-题解-Link"><span class="nav-number">2.0.107.</span> <span class="nav-text">洛谷 2155 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数论"><span class="nav-number">2.0.108.</span> <span class="nav-text">Tag: 数论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-3329-题解-Link"><span class="nav-number">2.0.109.</span> <span class="nav-text">bzoj 3329 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数位DP，矩阵快速幂"><span class="nav-number">2.0.110.</span> <span class="nav-text">Tag:数位DP，矩阵快速幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-5242-题解-Link"><span class="nav-number">2.0.111.</span> <span class="nav-text">HDU 5242 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-贪心，树链剖分思想"><span class="nav-number">2.0.112.</span> <span class="nav-text">Tag:贪心，树链剖分思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-570E-题解-Link"><span class="nav-number">2.0.113.</span> <span class="nav-text">CF 570E 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DP-2"><span class="nav-number">2.0.114.</span> <span class="nav-text">Tag: DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-979D-题解-Link"><span class="nav-number">2.0.115.</span> <span class="nav-text">CF 979D 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-STL，乱搞"><span class="nav-number">2.0.116.</span> <span class="nav-text">Tag:STL，乱搞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-4507-题解-Link"><span class="nav-number">2.0.117.</span> <span class="nav-text">HDU 4507 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-数位DP（超难）"><span class="nav-number">2.0.118.</span> <span class="nav-text">Tag:数位DP（超难）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-4334-题解-Link"><span class="nav-number">2.0.119.</span> <span class="nav-text">HDU 4334 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-记忆化，单调性，思维"><span class="nav-number">2.0.120.</span> <span class="nav-text">Tag:记忆化，单调性，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-1043F-题解Link"><span class="nav-number">2.0.121.</span> <span class="nav-text">CF 1043F 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：容斥"><span class="nav-number">2.0.122.</span> <span class="nav-text">Tag：容斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-2842-题解-Link"><span class="nav-number">2.0.123.</span> <span class="nav-text">hdu 2842 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：矩阵快速幂"><span class="nav-number">2.0.124.</span> <span class="nav-text">Tag：矩阵快速幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-455C-题解-Link"><span class="nav-number">2.0.125.</span> <span class="nav-text">CF 455C 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：直径，并查集"><span class="nav-number">2.0.126.</span> <span class="nav-text">Tag：直径，并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-3461-题解-Link"><span class="nav-number">2.0.127.</span> <span class="nav-text">HDU 3461 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，并查集"><span class="nav-number">2.0.128.</span> <span class="nav-text">Tag：思维，并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-4318-题解-Link"><span class="nav-number">2.0.129.</span> <span class="nav-text">bzoj 4318 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：期望"><span class="nav-number">2.0.130.</span> <span class="nav-text">Tag：期望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-280C-题解-Link"><span class="nav-number">2.0.131.</span> <span class="nav-text">CF 280C 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-期望"><span class="nav-number">2.0.132.</span> <span class="nav-text">Tag:期望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJ-1083-题解-Link"><span class="nav-number">2.0.133.</span> <span class="nav-text">POJ 1083 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-思维"><span class="nav-number">2.0.134.</span> <span class="nav-text">Tag:思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-4035-题解-Link"><span class="nav-number">2.0.135.</span> <span class="nav-text">hdu 4035 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-期望，树形DP"><span class="nav-number">2.0.136.</span> <span class="nav-text">Tag:期望，树形DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-6170-题解-Link"><span class="nav-number">2.0.137.</span> <span class="nav-text">hdu 6170 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：字符串DP"><span class="nav-number">2.0.138.</span> <span class="nav-text">Tag：字符串DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-2243-题解-Link"><span class="nav-number">2.0.139.</span> <span class="nav-text">bzoj 2243 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：线段树，树链剖分"><span class="nav-number">2.0.140.</span> <span class="nav-text">Tag：线段树，树链剖分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-5692-题解-Link"><span class="nav-number">2.0.141.</span> <span class="nav-text">hdu 5692 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-DFS序"><span class="nav-number">2.0.142.</span> <span class="nav-text">Tag:DFS序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-3234-题解-Link"><span class="nav-number">2.0.143.</span> <span class="nav-text">hdu 3234 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-并查集，思维-1"><span class="nav-number">2.0.144.</span> <span class="nav-text">Tag:并查集，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-4113-题解Link"><span class="nav-number">2.0.145.</span> <span class="nav-text">洛谷 4113 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-树状数组，瞎搞（树状数组水主席树！！！）"><span class="nav-number">2.0.146.</span> <span class="nav-text">Tag:树状数组，瞎搞（树状数组水主席树！！！）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-4883-题解-Link"><span class="nav-number">2.0.147.</span> <span class="nav-text">bzoj 4883 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag；思维，建图，最小基环森林"><span class="nav-number">2.0.148.</span> <span class="nav-text">Tag；思维，建图，最小基环森林</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-5029-题解-Link"><span class="nav-number">2.0.149.</span> <span class="nav-text">hdu 5029 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：树链剖分，线段树，思维"><span class="nav-number">2.0.150.</span> <span class="nav-text">Tag：树链剖分，线段树，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-3119-题解Link"><span class="nav-number">2.0.151.</span> <span class="nav-text">洛谷 3119 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：强连通分量，思维"><span class="nav-number">2.0.152.</span> <span class="nav-text">Tag：强连通分量，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-1407-题解-Link"><span class="nav-number">2.0.153.</span> <span class="nav-text">洛谷 1407 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-强连通分量，建图，思维"><span class="nav-number">2.0.154.</span> <span class="nav-text">Tag:强连通分量，建图，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-3926-题解-Link"><span class="nav-number">2.0.155.</span> <span class="nav-text">poj 3926 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：单调队列优化DP"><span class="nav-number">2.0.156.</span> <span class="nav-text">Tag：单调队列优化DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AtCoder-2159-题解-Link"><span class="nav-number">2.0.157.</span> <span class="nav-text">AtCoder 2159 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag-STL，思维，并查集"><span class="nav-number">2.0.158.</span> <span class="nav-text">Tag:STL，思维，并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-3223-amp-bzoj-2729-题解Link"><span class="nav-number">2.0.159.</span> <span class="nav-text">洛谷 3223 &amp; bzoj 2729 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：组合数学，高精"><span class="nav-number">2.0.160.</span> <span class="nav-text">Tag：组合数学，高精</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2144-amp-bzoj1002-题解Link"><span class="nav-number">2.0.161.</span> <span class="nav-text">洛谷 2144 &amp; bzoj1002 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：找规律"><span class="nav-number">2.0.162.</span> <span class="nav-text">Tag：找规律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPOJ-GSS3-题解Link"><span class="nav-number">2.0.163.</span> <span class="nav-text">SPOJ GSS3 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：线段树"><span class="nav-number">2.0.164.</span> <span class="nav-text">Tag：线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-2795-题解-Link"><span class="nav-number">2.0.165.</span> <span class="nav-text">hdu 2795 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：线段树-1"><span class="nav-number">2.0.166.</span> <span class="nav-text">Tag：线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPOJ-LCMSum-amp-bzoj-2226-amp-洛谷-1891-题解-Link"><span class="nav-number">2.0.167.</span> <span class="nav-text">SPOJ LCMSum &amp; bzoj 2226 &amp; 洛谷 1891 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：数论，推式子"><span class="nav-number">2.0.168.</span> <span class="nav-text">Tag：数论，推式子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LibreOJ-515-题解Link"><span class="nav-number">2.0.169.</span> <span class="nav-text">LibreOJ 515 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：bitset-DP"><span class="nav-number">2.0.170.</span> <span class="nav-text">Tag：bitset,DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-2109-题解Link"><span class="nav-number">2.0.171.</span> <span class="nav-text">poj 2109 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：瞎搞"><span class="nav-number">2.0.172.</span> <span class="nav-text">Tag：瞎搞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-1197-amp-bzoj-1015-题解Link"><span class="nav-number">2.0.173.</span> <span class="nav-text">洛谷 1197 &amp; bzoj 1015 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：并查集，思维"><span class="nav-number">2.0.174.</span> <span class="nav-text">Tag：并查集，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bzoj-3997-amp-洛谷-3974-题解-Link"><span class="nav-number">2.0.175.</span> <span class="nav-text">bzoj 3997 &amp; 洛谷 3974 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：建图，图论，DP"><span class="nav-number">2.0.176.</span> <span class="nav-text">Tag：建图，图论，DP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-4602-题解-Link"><span class="nav-number">2.0.177.</span> <span class="nav-text">hdu 4602 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：组合数学，推式子"><span class="nav-number">2.0.178.</span> <span class="nav-text">Tag：组合数学，推式子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-4000-题解-Link"><span class="nav-number">2.0.179.</span> <span class="nav-text">hdu 4000 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：树状数组"><span class="nav-number">2.0.180.</span> <span class="nav-text">Tag：树状数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-4462-amp-bzoj-5301-题解-Link"><span class="nav-number">2.0.181.</span> <span class="nav-text">洛谷 4462 &amp; bzoj 5301 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：莫队"><span class="nav-number">2.0.182.</span> <span class="nav-text">Tag：莫队</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2272-amp-bzoj-1093-题解-Link"><span class="nav-number">2.0.183.</span> <span class="nav-text">洛谷 2272 &amp; bzoj 1093 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：强连通分量，思维-1"><span class="nav-number">2.0.184.</span> <span class="nav-text">Tag：强连通分量，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-5094-amp-poj-1990-题解-Link"><span class="nav-number">2.0.185.</span> <span class="nav-text">洛谷 5094 &amp; poj 1990 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：树状数组-1"><span class="nav-number">2.0.186.</span> <span class="nav-text">Tag：树状数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdu-6411-题解Link"><span class="nav-number">2.0.187.</span> <span class="nav-text">hdu 6411 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，好题，并查集"><span class="nav-number">2.0.188.</span> <span class="nav-text">Tag：思维，好题，并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2320-amp-bzoj-1192-题解Link"><span class="nav-number">2.0.189.</span> <span class="nav-text">洛谷 2320 &amp; bzoj 1192 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，构造"><span class="nav-number">2.0.190.</span> <span class="nav-text">Tag：思维，构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-3735-题解-Link"><span class="nav-number">2.0.191.</span> <span class="nav-text">poj 3735 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，构造-1"><span class="nav-number">2.0.192.</span> <span class="nav-text">Tag：思维，构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-2478-题解Link"><span class="nav-number">2.0.193.</span> <span class="nav-text">poj 2478 题解Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：欧拉函数"><span class="nav-number">2.0.194.</span> <span class="nav-text">Tag：欧拉函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-1936-题解-Link"><span class="nav-number">2.0.195.</span> <span class="nav-text">poj 1936 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：字符串"><span class="nav-number">2.0.196.</span> <span class="nav-text">Tag：字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-1989-amp-hdu-2712-amp-洛谷5093-题解-Link"><span class="nav-number">2.0.197.</span> <span class="nav-text">poj 1989 &amp; hdu 2712 &amp; 洛谷5093 题解 Link</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tag：贪心，思维，好题"><span class="nav-number">2.1.</span> <span class="nav-text">Tag：贪心，思维，好题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-1268-题解-Link"><span class="nav-number">2.1.1.</span> <span class="nav-text">洛谷 1268 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：图论，思维"><span class="nav-number">2.1.2.</span> <span class="nav-text">Tag：图论，思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2879-amp-poj-3263-题解-Link"><span class="nav-number">2.1.3.</span> <span class="nav-text">洛谷 2879 &amp; poj 3263 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，前缀和"><span class="nav-number">2.1.4.</span> <span class="nav-text">Tag：思维，前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-4588-amp-bzoj-5334-题解-Link"><span class="nav-number">2.1.5.</span> <span class="nav-text">洛谷 4588 &amp; bzoj 5334 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：线段树，打死你也想不到是用线段树"><span class="nav-number">2.1.6.</span> <span class="nav-text">Tag：线段树，打死你也想不到是用线段树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#poj-1149-题解-Link"><span class="nav-number">2.1.7.</span> <span class="nav-text">poj 1149 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：网络流，建图"><span class="nav-number">2.1.8.</span> <span class="nav-text">Tag：网络流，建图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF-140C-题解-Link"><span class="nav-number">2.1.9.</span> <span class="nav-text">CF 140C 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：思维，贪心"><span class="nav-number">2.1.10.</span> <span class="nav-text">Tag：思维，贪心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2509-题解-Link"><span class="nav-number">2.1.11.</span> <span class="nav-text">洛谷 2509 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：倍增，单调队列，思维，好题"><span class="nav-number">2.1.12.</span> <span class="nav-text">Tag：倍增，单调队列，思维，好题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛谷-2774-题解-Link"><span class="nav-number">2.1.13.</span> <span class="nav-text">洛谷 2774 题解 Link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tag：最小割建图"><span class="nav-number">2.1.14.</span> <span class="nav-text">Tag：最小割建图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LightningUZ</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数"></span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.7.0</div>
+
+
+<link href="/js/google-code-prettify/tomorrow-night-bright.min.css" type="text/css" rel="stylesheet">
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        当你的能力还配不上你的目标时，没有资格后退！ 
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="//cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+<!-- 女儿 -->
+  <script src="/live2d-widget/autoload.js"></script>
+<!-- 崩溃欺骗 -->
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</html>

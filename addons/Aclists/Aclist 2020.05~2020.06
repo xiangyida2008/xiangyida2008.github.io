@@ -1,0 +1,331 @@
+AC_list
+	2020.05.01: 8
+    http://acm.hdu.edu.cn/showproblem.php?pid=1856
+	https://www.luogu.com.cn/problem/P2416 (blog!!! 毒瘤题)
+	https://www.luogu.com.cn/problem/P2245
+	https://vjudge.net/problem/CodeForces-567E
+    https://vjudge.net/problem/CodeForces-825G
+    https://vjudge.net/problem/CodeForces-527E
+    https://loj.ac/problem/6387
+    https://www.luogu.com.cn/problem/P5446
+    2020.05.02: 9
+    https://vjudge.net/problem/CodeForces-1348C
+    https://vjudge.net/problem/CodeForces-1296F 
+    https://vjudge.net/problem/CodeForces-1231E (blog!!!)
+    https://vjudge.net/problem/CodeForces-1264B
+    https://vjudge.net/problem/CodeForces-1148D (short blog)
+    https://vjudge.net/problem/CodeForces-1175D (short blog)
+    https://vjudge.net/problem/CodeForces-1156C
+    https://vjudge.net/problem/CodeForces-1131E
+    https://vjudge.net/problem/CodeForces-1155D (short blog)
+    (俩一块写，叫 CF 思维题三连)
+    2020.05.03 9
+    http://poj.org/problem?id=3802
+    http://acm.hdu.edu.cn/showproblem.php?pid=1249
+    http://acm.hdu.edu.cn/showproblem.php?pid=6623
+    http://noi.ac/contest/334/problem/1786
+    http://noi.ac/contest/334/problem/1786
+    https://www.luogu.com.cn/problem/P4374
+    http://www.lydsy.com/JudgeOnline/problem.php?id=5279
+    https://www.luogu.com.cn/problem/P4199
+    http://www.lydsy.com/JudgeOnline/problem.php?id=3160
+    2020.05.04 8
+    https://www.luogu.com.cn/problem/P4245
+    http://acm.hdu.edu.cn/showproblem.php?pid=1251
+    https://vjudge.net/problem/CodeForces-522D
+    https://vjudge.net/problem/CodeForces-633H
+    https://vjudge.net/problem/CodeForces-121E
+    https://www.luogu.com.cn/problem/P1712 (blog!!!)
+    http://www.lydsy.com/JudgeOnline/problem.php?id=4653
+    https://loj.ac/problem/2086
+    2020.05.05 4 (要开学了，适应一下)
+    https://www.luogu.com.cn/problem/P4238
+    https://www.luogu.com.cn/problem/P3338
+    https://loj.ac/problem/2200
+    http://www.lydsy.com/JudgeOnline/problem.php?id=3527
+    2020.05.06 4
+    https://www.luogu.com.cn/problem/P4105
+    https://vjudge.net/problem/CodeForces-1328F
+    https://vjudge.net/problem/CodeForces-1282D
+    https://vjudge.net/problem/CodeForces-1188B
+    2020.05.07 3
+    http://www.lydsy.com/JudgeOnline/problem.php?id=3874
+    https://loj.ac/problem/2224
+    https://www.luogu.com.cn/problem/P4040
+    http://acm.hdu.edu.cn/showproblem.php?pid=5360
+    2020.05.08 4
+    http://poj.org/problem?id=1208
+    https://vjudge.net/problem/Codeforces-1060C
+    https://vjudge.net/problem/Gym-101243E
+    http://noi.ac/problem/107
+    2020.05.09 4
+    http://noi.ac/problem/40
+    http://www.lydsy.com/JudgeOnline/problem.php?id=3991
+    https://www.luogu.com.cn/problem/P3320
+    http://noi.ac/problem/30
+    2020.05.10 8
+    http://noi.ac/problem/70
+    http://noi.ac/problem/78
+    http://noi.ac/problem/90
+    http://noi.ac/problem/33
+    http://poj.org/problem?id=3150
+    http://acm.hdu.edu.cn/showproblem.php?pid=1402
+    https://www.luogu.com.cn/problem/P2503
+    http://www.lydsy.com/JudgeOnline/problem.php?id=2428
+    2020.05.11 4
+    http://noi.ac/problem/480
+    http://noi.ac/problem/306
+    http://noi.ac/problem/147
+    https://vjudge.net/problem/CodeForces-631C
+    2020.05.12 4
+    http://noi.ac/problem/227
+    http://noi.ac/problem/228
+    http://noi.ac/problem/66
+    http://acm.hdu.edu.cn/showproblem.php?pid=2124
+    2020.05.13 3
+    http://noi.ac/problem/65
+    http://noi.ac/problem/656
+    http://noi.ac/problem/59
+    2020.05.14 5
+    http://noi.ac/problem/665
+    http://noi.ac/problem/67
+    http://noi.ac/problem/38
+    http://poj.org/problem?id=2823
+    https://www.luogu.com.cn/problem/P6011
+    2020.05.15 4
+    http://poj.org/problem?id=2201
+    http://noi.ac/problem/503
+    http://noi.ac/problem/375
+    http://noi.ac/problem/604
+    2020.05.16 8
+    http://noi.ac/problem/614
+    http://noi.ac/problem/613
+    http://noi.ac/problem/243
+    http://noi.ac/problem/116
+    http://noi.ac/problem/146
+    https://vjudge.net/problem/CodeForces-820D
+    https://www.luogu.com.cn/problem/P6268
+    https://loj.ac/problem/2617
+    2020.05.17 8
+    http://noi.ac/problem/711
+    http://noi.ac/problem/752
+    http://noi.ac/problem/799
+    http://noi.ac/problem/738
+    http://noi.ac/problem/95
+    http://noi.ac/problem/1499
+    http://noi.ac/problem/1502
+    http://noi.ac/problem/1516
+    2020.05.18 2 (期末复习)
+    http://noi.ac/problem/559
+    http://noi.ac/problem/108
+    2020.05.19 0
+    2020.05.20 0
+    2020.05.21 3
+    http://noi.ac/problem/595
+    http://noi.ac/problem/587
+    http://noi.ac/problem/712
+    2020.05.22 0
+    2020.05.23 8 (恢复)
+    http://noi.ac/problem/602
+    http://noi.ac/problem/582
+    http://noi.ac/problem/572
+    http://noi.ac/problem/573
+    http://noi.ac/problem/566
+    http://noi.ac/problem/561
+    https://www.luogu.com.cn/problem/P6477
+    https://www.luogu.com.cn/problem/P4342
+    2020.05.24 8
+    http://noi.ac/problem/624
+    http://noi.ac/problem/627
+    http://noi.ac/problem/558
+    http://noi.ac/problem/557
+    http://noi.ac/problem/502
+    http://acm.hdu.edu.cn/showproblem.php?pid=2078
+    http://www.lydsy.com/JudgeOnline/problem.php?id=1096
+    https://www.luogu.com.cn/problem/P2120
+    2020.05.25 4
+    http://noi.ac/problem/643
+    http://noi.ac/problem/642
+    http://noi.ac/problem/649
+    https://www.luogu.com.cn/problem/P4717
+    2020.05.26 4
+    http://noi.ac/problem/583
+    http://noi.ac/problem/574
+    http://noi.ac/problem/625
+    http://noi.ac/problem/628
+    2020.05.27 4
+    http://www.lydsy.com/JudgeOnline/problem.php?id=4589
+    http://noi.ac/problem/630
+    https://www.luogu.com.cn/problem/P3175
+    http://www.lydsy.com/JudgeOnline/problem.php?id=4036
+    2020.05.28 4
+    http://noi.ac/problem/634
+    http://noi.ac/problem/632
+    http://noi.ac/problem/631
+    http://www.51nod.com/Challenge/Problem.html#problemId=1773
+    2020.05.29 4
+    http://noi.ac/problem/644
+    http://noi.ac/problem/636
+    http://noi.ac/problem/639
+    http://noi.ac/problem/635
+    2020.05.30 8
+    https://vjudge.net/problem/CodeForces-1031B
+    https://vjudge.net/problem/CodeForces-663E
+    https://loj.ac/problem/2127
+    http://noi.ac/problem/650
+    http://noi.ac/problem/143
+    http://noi.ac/problem/79
+    http://noi.ac/problem/91
+    http://noi.ac/problem/640
+    2020.05.31 8
+    http://noi.ac/problem/803
+    http://noi.ac/problem/800
+    http://noi.ac/problem/664
+    http://noi.ac/problem/667
+    http://noi.ac/problem/660
+    http://noi.ac/problem/657
+    http://noi.ac/problem/659
+    http://noi.ac/problem/653
+    2020.06.01 4
+    http://noi.ac/problem/715
+    http://noi.ac/problem/669
+    http://noi.ac/problem/661
+    http://noi.ac/problem/668
+    2020.06.02 5
+    http://noi.ac/problem/652
+    http://noi.ac/problem/651
+    https://www.luogu.com.cn/problem/P5023
+    https://loj.ac/problem/2954
+    http://noi.ac/problem/141
+    2020.06.03 3
+    http://noi.ac/problem/629
+    https://www.luogu.com.cn/problem/P3698
+    https://loj.ac/problem/3018
+    2020.06.04 4
+    http://noi.ac/problem/641
+    https://www.luogu.com.cn/problem/P2255
+    https://vjudge.net/problem/CodeForces-1027C
+    http://noi.ac/problem/633
+    2020.06.05 0
+    2020.06.06 12
+    http://poj.org/problem?id=1789
+    https://vjudge.net/problem/CodeForces-985C
+    http://www.lydsy.com/JudgeOnline/problem.php?id=2111
+    https://www.luogu.com.cn/problem/P2606
+    http://noi.ac/problem/754
+    http://noi.ac/problem/741
+    http://noi.ac/problem/748
+    http://noi.ac/problem/658
+    http://noi.ac/problem/666
+    http://noi.ac/problem/670
+    http://noi.ac/problem/63
+    http://noi.ac/problem/42
+    2020.06.07 8
+    https://www.luogu.com.cn/problem/P3973
+    https://loj.ac/problem/2100
+    http://www.lydsy.com/JudgeOnline/problem.php?id=3996
+    http://www.51nod.com/Challenge/Problem.html#problemId=1007
+    http://noi.ac/problem/88
+    http://noi.ac/problem/345
+    http://noi.ac/problem/31
+    http://noi.ac/problem/504
+    2020.06.08 2
+    http://noi.ac/problem/69
+    http://noi.ac/problem/52
+    2020.06.09 2
+    http://noi.ac/problem/434
+    http://noi.ac/problem/96
+    2020.06.10 2
+    http://noi.ac/problem/62
+    http://noi.ac/problem/662
+    2020.06.11 2
+    http://noi.ac/problem/43
+    http://noi.ac/problem/457
+    2020.06.12 2
+    https://vjudge.net/problem/CodeForces-191E
+    http://noi.ac/problem/125
+    2020.06.13 8
+    http://noi.ac/problem/694
+    http://noi.ac/problem/514
+    http://noi.ac/problem/406
+    http://noi.ac/problem/358
+    http://noi.ac/problem/216
+    http://noi.ac/problem/60
+    https://www.luogu.com.cn/problem/P3934
+    * http://www.lydsy.com/JudgeOnline/problem.php?id=5394
+    2020.06.14 7
+    https://vjudge.net/problem/CodeForces-916B
+    http://acm.hdu.edu.cn/showproblem.php?pid=6106
+    http://noi.ac/problem/647
+    * http://noi.ac/problem/617
+    http://noi.ac/problem/512
+    http://noi.ac/problem/110
+    http://noi.ac/problem/131
+    2020.06.15 2
+    http://noi.ac/problem/798
+    http://noi.ac/problem/804
+    2020.06.16 2
+    http://noi.ac/problem/801
+    https://loj.ac/problem/530
+    2020.06.17 2
+    https://noi.ac/problem/81
+    http://noi.ac/problem/378
+    2020.06.18 2
+    http://noi.ac/problem/132
+    https://loj.ac/problem/10005
+    2020.06.19 2
+    http://noi.ac/problem/215
+    https://loj.ac/problem/10062
+    2020.06.20 6
+    http://noi.ac/problem/35
+    http://noi.ac/problem/142
+    https://www.luogu.com.cn/problem/P5024
+    https://loj.ac/problem/2955
+    http://noi.ac/problem/113
+    https://vjudge.net/problem/CodeForces-1263E
+    2020.06.21 6 (十年一遇！日食！)
+    http://noi.ac/problem/700
+    https://loj.ac/problem/10177
+    https://www.luogu.com.cn/problem/P2627
+    https://loj.ac/problem/10201
+    https://loj.ac/problem/10229
+    https://vjudge.net/problem/CodeForces-1175E
+    2020.06.22 2
+    http://noi.ac/problem/242
+    https://loj.ac/problem/108
+    2020.06.23 0 (学平衡树)
+    2020.06.24 4
+    https://loj.ac/problem/10143
+    https://www.luogu.com.cn/problem/P2234
+    https://loj.ac/problem/10144
+    https://www.luogu.com.cn/problem/P2286
+    2020.06.25 6 (6.25惨案&端午)
+    http://noi.ac/problem/124
+    http://noi.ac/problem/49
+    https://loj.ac/problem/107
+    https://loj.ac/problem/10145
+    https://loj.ac/problem/106
+    https://www.luogu.com.cn/problem/P3380
+    2020.06.26 6 
+    https://www.luogu.com.cn/problem/P6136
+    https://www.luogu.com.cn/problem/P1016
+    https://www.luogu.com.cn/problem/P5666
+    https://loj.ac/problem/3213
+    https://vjudge.net/problem/CodeForces-1187D
+    https://www.luogu.com.cn/problem/P4146
+    2020.06.27 6
+    https://www.luogu.com.cn/problem/P4231
+    https://www.luogu.com.cn/problem/P2087
+    http://noi.ac/problem/706
+    https://www.luogu.com.cn/problem/P2202
+    https://www.luogu.com.cn/problem/P1311
+    https://loj.ac/problem/2597
+    2020.06.28 2
+    http://noi.ac/problem/513
+    http://noi.ac/problem/567
+    2020.06.29 2
+    https://vjudge.net/problem/CodeForces-985D
+    http://poj.org/problem?id=2253
+    2020.06.30 1
+    https://www.luogu.com.cn/problem/P5922
+    
